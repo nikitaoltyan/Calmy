@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C1FE5E125E7ED3A00611190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FE5E025E7ED3A00611190 /* AppDelegate.swift */; };
+		5C1FE5E325E7ED3A00611190 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FE5E225E7ED3A00611190 /* SceneDelegate.swift */; };
+		5C1FE5E525E7ED3A00611190 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FE5E425E7ED3A00611190 /* ViewController.swift */; };
+		5C1FE5E825E7ED3A00611190 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C1FE5E625E7ED3A00611190 /* Main.storyboard */; };
+		5C1FE5EA25E7ED3E00611190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C1FE5E925E7ED3E00611190 /* Assets.xcassets */; };
+		5C1FE5ED25E7ED3E00611190 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C1FE5EB25E7ED3E00611190 /* LaunchScreen.storyboard */; };
+		5C1FE5F825E7ED3E00611190 /* MoodyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FE5F725E7ED3E00611190 /* MoodyTests.swift */; };
+		5C1FE60325E7ED3E00611190 /* MoodyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FE60225E7ED3E00611190 /* MoodyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C1FE5F425E7ED3E00611190 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C1FE5D525E7ED3A00611190 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C1FE5DC25E7ED3A00611190;
+			remoteInfo = Moody;
+		};
+		5C1FE5FF25E7ED3E00611190 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C1FE5D525E7ED3A00611190 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C1FE5DC25E7ED3A00611190;
+			remoteInfo = Moody;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5C1FE5DD25E7ED3A00611190 /* Moody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moody.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1FE5E025E7ED3A00611190 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5C1FE5E225E7ED3A00611190 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5C1FE5E425E7ED3A00611190 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C1FE5E725E7ED3A00611190 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5C1FE5E925E7ED3E00611190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C1FE5EC25E7ED3E00611190 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C1FE5EE25E7ED3E00611190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C1FE5F325E7ED3E00611190 /* MoodyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1FE5F725E7ED3E00611190 /* MoodyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodyTests.swift; sourceTree = "<group>"; };
+		5C1FE5F925E7ED3E00611190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C1FE5FE25E7ED3E00611190 /* MoodyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1FE60225E7ED3E00611190 /* MoodyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodyUITests.swift; sourceTree = "<group>"; };
+		5C1FE60425E7ED3E00611190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C1FE5DA25E7ED3A00611190 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C1FE5F025E7ED3E00611190 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C1FE5FB25E7ED3E00611190 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C1FE5D425E7ED3A00611190 = {
+			isa = PBXGroup;
+			children = (
+				5C1FE5DF25E7ED3A00611190 /* Moody */,
+				5C1FE5F625E7ED3E00611190 /* MoodyTests */,
+				5C1FE60125E7ED3E00611190 /* MoodyUITests */,
+				5C1FE5DE25E7ED3A00611190 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5C1FE5DE25E7ED3A00611190 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C1FE5DD25E7ED3A00611190 /* Moody.app */,
+				5C1FE5F325E7ED3E00611190 /* MoodyTests.xctest */,
+				5C1FE5FE25E7ED3E00611190 /* MoodyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C1FE5DF25E7ED3A00611190 /* Moody */ = {
+			isa = PBXGroup;
+			children = (
+				5C1FE5E025E7ED3A00611190 /* AppDelegate.swift */,
+				5C1FE5E225E7ED3A00611190 /* SceneDelegate.swift */,
+				5C1FE5E425E7ED3A00611190 /* ViewController.swift */,
+				5C1FE5E625E7ED3A00611190 /* Main.storyboard */,
+				5C1FE5E925E7ED3E00611190 /* Assets.xcassets */,
+				5C1FE5EB25E7ED3E00611190 /* LaunchScreen.storyboard */,
+				5C1FE5EE25E7ED3E00611190 /* Info.plist */,
+			);
+			path = Moody;
+			sourceTree = "<group>";
+		};
+		5C1FE5F625E7ED3E00611190 /* MoodyTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C1FE5F725E7ED3E00611190 /* MoodyTests.swift */,
+				5C1FE5F925E7ED3E00611190 /* Info.plist */,
+			);
+			path = MoodyTests;
+			sourceTree = "<group>";
+		};
+		5C1FE60125E7ED3E00611190 /* MoodyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5C1FE60225E7ED3E00611190 /* MoodyUITests.swift */,
+				5C1FE60425E7ED3E00611190 /* Info.plist */,
+			);
+			path = MoodyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C1FE5DC25E7ED3A00611190 /* Moody */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C1FE60725E7ED3E00611190 /* Build configuration list for PBXNativeTarget "Moody" */;
+			buildPhases = (
+				5C1FE5D925E7ED3A00611190 /* Sources */,
+				5C1FE5DA25E7ED3A00611190 /* Frameworks */,
+				5C1FE5DB25E7ED3A00611190 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Moody;
+			productName = Moody;
+			productReference = 5C1FE5DD25E7ED3A00611190 /* Moody.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5C1FE5F225E7ED3E00611190 /* MoodyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C1FE60A25E7ED3E00611190 /* Build configuration list for PBXNativeTarget "MoodyTests" */;
+			buildPhases = (
+				5C1FE5EF25E7ED3E00611190 /* Sources */,
+				5C1FE5F025E7ED3E00611190 /* Frameworks */,
+				5C1FE5F125E7ED3E00611190 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C1FE5F525E7ED3E00611190 /* PBXTargetDependency */,
+			);
+			name = MoodyTests;
+			productName = MoodyTests;
+			productReference = 5C1FE5F325E7ED3E00611190 /* MoodyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5C1FE5FD25E7ED3E00611190 /* MoodyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C1FE60D25E7ED3E00611190 /* Build configuration list for PBXNativeTarget "MoodyUITests" */;
+			buildPhases = (
+				5C1FE5FA25E7ED3E00611190 /* Sources */,
+				5C1FE5FB25E7ED3E00611190 /* Frameworks */,
+				5C1FE5FC25E7ED3E00611190 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C1FE60025E7ED3E00611190 /* PBXTargetDependency */,
+			);
+			name = MoodyUITests;
+			productName = MoodyUITests;
+			productReference = 5C1FE5FE25E7ED3E00611190 /* MoodyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C1FE5D525E7ED3A00611190 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					5C1FE5DC25E7ED3A00611190 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					5C1FE5F225E7ED3E00611190 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 5C1FE5DC25E7ED3A00611190;
+					};
+					5C1FE5FD25E7ED3E00611190 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 5C1FE5DC25E7ED3A00611190;
+					};
+				};
+			};
+			buildConfigurationList = 5C1FE5D825E7ED3A00611190 /* Build configuration list for PBXProject "Moody" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5C1FE5D425E7ED3A00611190;
+			productRefGroup = 5C1FE5DE25E7ED3A00611190 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C1FE5DC25E7ED3A00611190 /* Moody */,
+				5C1FE5F225E7ED3E00611190 /* MoodyTests */,
+				5C1FE5FD25E7ED3E00611190 /* MoodyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C1FE5DB25E7ED3A00611190 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C1FE5ED25E7ED3E00611190 /* LaunchScreen.storyboard in Resources */,
+				5C1FE5EA25E7ED3E00611190 /* Assets.xcassets in Resources */,
+				5C1FE5E825E7ED3A00611190 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C1FE5F125E7ED3E00611190 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C1FE5FC25E7ED3E00611190 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C1FE5D925E7ED3A00611190 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C1FE5E525E7ED3A00611190 /* ViewController.swift in Sources */,
+				5C1FE5E125E7ED3A00611190 /* AppDelegate.swift in Sources */,
+				5C1FE5E325E7ED3A00611190 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C1FE5EF25E7ED3E00611190 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C1FE5F825E7ED3E00611190 /* MoodyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C1FE5FA25E7ED3E00611190 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C1FE60325E7ED3E00611190 /* MoodyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C1FE5F525E7ED3E00611190 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C1FE5DC25E7ED3A00611190 /* Moody */;
+			targetProxy = 5C1FE5F425E7ED3E00611190 /* PBXContainerItemProxy */;
+		};
+		5C1FE60025E7ED3E00611190 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C1FE5DC25E7ED3A00611190 /* Moody */;
+			targetProxy = 5C1FE5FF25E7ED3E00611190 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5C1FE5E625E7ED3A00611190 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C1FE5E725E7ED3A00611190 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5C1FE5EB25E7ED3E00611190 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C1FE5EC25E7ED3E00611190 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C1FE60525E7ED3E00611190 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5C1FE60625E7ED3E00611190 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C1FE60825E7ED3E00611190 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z962Q7H43F;
+				INFOPLIST_FILE = Moody/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Greener.Moody;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C1FE60925E7ED3E00611190 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z962Q7H43F;
+				INFOPLIST_FILE = Moody/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Greener.Moody;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5C1FE60B25E7ED3E00611190 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z962Q7H43F;
+				INFOPLIST_FILE = MoodyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Greener.MoodyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moody.app/Moody";
+			};
+			name = Debug;
+		};
+		5C1FE60C25E7ED3E00611190 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z962Q7H43F;
+				INFOPLIST_FILE = MoodyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Greener.MoodyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moody.app/Moody";
+			};
+			name = Release;
+		};
+		5C1FE60E25E7ED3E00611190 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z962Q7H43F;
+				INFOPLIST_FILE = MoodyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Greener.MoodyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Moody;
+			};
+			name = Debug;
+		};
+		5C1FE60F25E7ED3E00611190 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z962Q7H43F;
+				INFOPLIST_FILE = MoodyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Greener.MoodyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Moody;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C1FE5D825E7ED3A00611190 /* Build configuration list for PBXProject "Moody" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C1FE60525E7ED3E00611190 /* Debug */,
+				5C1FE60625E7ED3E00611190 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C1FE60725E7ED3E00611190 /* Build configuration list for PBXNativeTarget "Moody" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C1FE60825E7ED3E00611190 /* Debug */,
+				5C1FE60925E7ED3E00611190 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C1FE60A25E7ED3E00611190 /* Build configuration list for PBXNativeTarget "MoodyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C1FE60B25E7ED3E00611190 /* Debug */,
+				5C1FE60C25E7ED3E00611190 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C1FE60D25E7ED3E00611190 /* Build configuration list for PBXNativeTarget "MoodyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C1FE60E25E7ED3E00611190 /* Debug */,
+				5C1FE60F25E7ED3E00611190 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C1FE5D525E7ED3A00611190 /* Project object */;
+}
