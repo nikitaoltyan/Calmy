@@ -8,20 +8,27 @@
 import UIKit
 
 class ColorView: UIView {
-
+    
+    var proportion: CGFloat?
+    
     override func draw(_ rect: CGRect) {
-        let number = CGFloat.random(in: 0.3...3)
         super.draw(rect)
-        let topRect = CGRect(x: 0, y: 0, width: rect.size.width/number, height: rect.size.height)
-        UIColor(red: 53/255, green: 80/255, blue: 112/255, alpha: 1).set()
-        guard let topContext = UIGraphicsGetCurrentContext() else { return }
-        topContext.fill(topRect)
-        
-        let setWidth = rect.size.width - rect.size.width/number
-        let middleRect = CGRect(x: rect.size.width/number, y: 0, width: setWidth, height: rect.size.height)
-        UIColor(red: 109/255, green: 89/255, blue: 122/255, alpha: 1).set()
-        guard let middleContext = UIGraphicsGetCurrentContext() else { return }
-        middleContext.fill(middleRect)
+        let prop: Array<CGFloat> = [0.2,  0.3, 0.5]
+        let colors = [UIColor(red: 53/255, green: 80/255, blue: 112/255, alpha: 1),
+                      UIColor(red: 109/255, green: 89/255, blue: 122/255, alpha: 1),
+                      .purple]
+        var curX: CGFloat = 0
+        for i in 0...prop.count-1 {
+            let rect = CGRect(x: curX, y: 0, width: rect.size.width * prop[i], height: rect.size.height)
+            colors[i].set()
+            guard let context = UIGraphicsGetCurrentContext() else { return }
+            context.fill(rect)
+            curX += rect.width
+        }
     }
 
+    
+    func CreateReacts(){
+        
+    }
 }
