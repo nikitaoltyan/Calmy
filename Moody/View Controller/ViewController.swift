@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
@@ -28,6 +29,9 @@ class ViewController: UIViewController {
         table.register(ColorDayCell.self, forCellReuseIdentifier: "ColorDayCell")
         return table
     }()
+    
+//    var context = NSManaged
+    
     
     override func viewDidLoad() {
         view.backgroundColor = Colors.pink
@@ -55,6 +59,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
  
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, handler) in
+                print("Delete Action Tapped")
+            }
+        deleteAction.backgroundColor = .red
+        let editAction = UIContextualAction(style: .destructive, title: "Edit") { (action, view, handler) in
+                print("Edit Action Tapped")
+            }
+        editAction.backgroundColor = .orange
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction, editAction])
+        configuration.performsFirstActionWithFullSwipe = true
+        return configuration
+    }
 }
 
 

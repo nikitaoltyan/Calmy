@@ -18,6 +18,9 @@
 		5C4FCE1525EA5C4D003F90F8 /* ColorDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FCE1425EA5C4D003F90F8 /* ColorDayCell.swift */; };
 		5C4FCE1A25EA5CDD003F90F8 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FCE1925EA5CDD003F90F8 /* ColorView.swift */; };
 		5C4FCE2525EA5D4E003F90F8 /* MainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FCE2425EA5D4E003F90F8 /* MainConstants.swift */; };
+		5CB5875A25EF700800DA5703 /* ColorData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5CB5875825EF700800DA5703 /* ColorData.xcdatamodeld */; };
+		5CB5876825EF711500DA5703 /* ColorData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB5876625EF711500DA5703 /* ColorData+CoreDataClass.swift */; };
+		5CB5876925EF711500DA5703 /* ColorData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB5876725EF711500DA5703 /* ColorData+CoreDataProperties.swift */; };
 		5CE7B1CF25EBA7CA00438B5B /* TimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7B1CE25EBA7CA00438B5B /* TimeFunctions.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +59,9 @@
 		5C4FCE1425EA5C4D003F90F8 /* ColorDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDayCell.swift; sourceTree = "<group>"; };
 		5C4FCE1925EA5CDD003F90F8 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		5C4FCE2425EA5D4E003F90F8 /* MainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstants.swift; sourceTree = "<group>"; };
+		5CB5875925EF700800DA5703 /* ColorData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ColorData.xcdatamodel; sourceTree = "<group>"; };
+		5CB5876625EF711500DA5703 /* ColorData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5CB5876725EF711500DA5703 /* ColorData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5CE7B1CE25EBA7CA00438B5B /* TimeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,17 +113,19 @@
 		5C1FE5DF25E7ED3A00611190 /* Moody */ = {
 			isa = PBXGroup;
 			children = (
-				5C1FE5E425E7ED3A00611190 /* ViewController.swift */,
-				5C4FCE1425EA5C4D003F90F8 /* ColorDayCell.swift */,
-				5C4FCE1925EA5CDD003F90F8 /* ColorView.swift */,
+				5CB5877325EF71B600DA5703 /* View Controller */,
+				5CB5877425EF71BF00DA5703 /* Cell */,
+				5CB5877525EF71CF00DA5703 /* View */,
 				5CE7B1CE25EBA7CA00438B5B /* TimeFunctions.swift */,
 				5C4FCE2425EA5D4E003F90F8 /* MainConstants.swift */,
+				5CB5875E25EF70B800DA5703 /* Core Data */,
 				5C1FE5E025E7ED3A00611190 /* AppDelegate.swift */,
 				5C1FE5E225E7ED3A00611190 /* SceneDelegate.swift */,
 				5C1FE5E625E7ED3A00611190 /* Main.storyboard */,
 				5C1FE5E925E7ED3E00611190 /* Assets.xcassets */,
 				5C1FE5EB25E7ED3E00611190 /* LaunchScreen.storyboard */,
 				5C1FE5EE25E7ED3E00611190 /* Info.plist */,
+				5CB5875825EF700800DA5703 /* ColorData.xcdatamodeld */,
 			);
 			path = Moody;
 			sourceTree = "<group>";
@@ -138,6 +146,39 @@
 				5C1FE60425E7ED3E00611190 /* Info.plist */,
 			);
 			path = MoodyUITests;
+			sourceTree = "<group>";
+		};
+		5CB5875E25EF70B800DA5703 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				5CB5876625EF711500DA5703 /* ColorData+CoreDataClass.swift */,
+				5CB5876725EF711500DA5703 /* ColorData+CoreDataProperties.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		5CB5877325EF71B600DA5703 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5C1FE5E425E7ED3A00611190 /* ViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		5CB5877425EF71BF00DA5703 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5C4FCE1425EA5C4D003F90F8 /* ColorDayCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5CB5877525EF71CF00DA5703 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5C4FCE1925EA5CDD003F90F8 /* ColorView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,13 +311,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CB5876925EF711500DA5703 /* ColorData+CoreDataProperties.swift in Sources */,
 				5C4FCE2525EA5D4E003F90F8 /* MainConstants.swift in Sources */,
 				5C1FE5E525E7ED3A00611190 /* ViewController.swift in Sources */,
 				5C1FE5E125E7ED3A00611190 /* AppDelegate.swift in Sources */,
+				5CB5876825EF711500DA5703 /* ColorData+CoreDataClass.swift in Sources */,
 				5C4FCE1525EA5C4D003F90F8 /* ColorDayCell.swift in Sources */,
 				5CE7B1CF25EBA7CA00438B5B /* TimeFunctions.swift in Sources */,
 				5C1FE5E325E7ED3A00611190 /* SceneDelegate.swift in Sources */,
 				5C4FCE1A25EA5CDD003F90F8 /* ColorView.swift in Sources */,
+				5CB5875A25EF700800DA5703 /* ColorData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +655,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5CB5875825EF700800DA5703 /* ColorData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5CB5875925EF700800DA5703 /* ColorData.xcdatamodel */,
+			);
+			currentVersion = 5CB5875925EF700800DA5703 /* ColorData.xcdatamodel */;
+			path = ColorData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5C1FE5D525E7ED3A00611190 /* Project object */;
 }
