@@ -95,9 +95,9 @@
 		5C1FE5D425E7ED3A00611190 = {
 			isa = PBXGroup;
 			children = (
-				5C1FE5DF25E7ED3A00611190 /* Moody */,
-				5C1FE5F625E7ED3E00611190 /* MoodyTests */,
-				5C1FE60125E7ED3E00611190 /* MoodyUITests */,
+				5C1FE5DF25E7ED3A00611190 /* Calmy */,
+				5C1FE5F625E7ED3E00611190 /* CalmyTests */,
+				5C1FE60125E7ED3E00611190 /* CalmyUITests */,
 				5C1FE5DE25E7ED3A00611190 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,7 +112,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5C1FE5DF25E7ED3A00611190 /* Moody */ = {
+		5C1FE5DF25E7ED3A00611190 /* Calmy */ = {
 			isa = PBXGroup;
 			children = (
 				5CFD7BC325F0B63F00C27A50 /* Core Data Functions */,
@@ -130,25 +130,25 @@
 				5C1FE5EE25E7ED3E00611190 /* Info.plist */,
 				5C2B72E325F0B2530061C47C /* Model.xcdatamodeld */,
 			);
-			path = Moody;
+			path = Calmy;
 			sourceTree = "<group>";
 		};
-		5C1FE5F625E7ED3E00611190 /* MoodyTests */ = {
+		5C1FE5F625E7ED3E00611190 /* CalmyTests */ = {
 			isa = PBXGroup;
 			children = (
 				5C1FE5F725E7ED3E00611190 /* MoodyTests.swift */,
 				5C1FE5F925E7ED3E00611190 /* Info.plist */,
 			);
-			path = MoodyTests;
+			path = CalmyTests;
 			sourceTree = "<group>";
 		};
-		5C1FE60125E7ED3E00611190 /* MoodyUITests */ = {
+		5C1FE60125E7ED3E00611190 /* CalmyUITests */ = {
 			isa = PBXGroup;
 			children = (
 				5C1FE60225E7ED3E00611190 /* MoodyUITests.swift */,
 				5C1FE60425E7ED3E00611190 /* Info.plist */,
 			);
-			path = MoodyUITests;
+			path = CalmyUITests;
 			sourceTree = "<group>";
 		};
 		5CFD7BBF25F0B62900C27A50 /* Core Data */ = {
