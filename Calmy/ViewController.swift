@@ -30,28 +30,11 @@ class ViewController: UIViewController {
         return table
     }()
     
-    // Referece to database
-//    var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-//    Data object
-//    var items: [ColorData]?
-    
     
     override func viewDidLoad() {
         view.backgroundColor = Colors.pink
         SetSubviews()
         ActivateLayouts()
-
-        DataFunction.DeleteAll()
-        
-        var a = DataFunction.FetchData()
-        print("a: \(a)")
-        
-        DataFunction.AddDataToModel(name: "Nikita", age: 20)
-        DataFunction.AddDataToModel(name: "Rita", age: 21)
-        a = DataFunction.FetchData()
-        print("a: \(a)")
-        
     }
 }
 
@@ -72,20 +55,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = colorTable.dequeueReusableCell(withIdentifier: "ColorDayCell", for: indexPath) as! ColorDayCell
         return cell
-    }
- 
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, handler) in
-                print("Delete Action Tapped")
-            }
-        deleteAction.backgroundColor = .red
-        let editAction = UIContextualAction(style: .destructive, title: "Edit") { (action, view, handler) in
-                print("Edit Action Tapped")
-            }
-        editAction.backgroundColor = .orange
-        let configuration = UISwipeActionsConfiguration(actions: [deleteAction, editAction])
-        configuration.performsFirstActionWithFullSwipe = true
-        return configuration
     }
 }
 

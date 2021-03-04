@@ -18,6 +18,7 @@ extension Model {
 
     @NSManaged public var name: String?
     @NSManaged public var age: Int32
+    @NSManaged public var arr: [NSNumber]
 
 }
 
