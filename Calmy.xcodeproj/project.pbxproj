@@ -22,6 +22,14 @@
 		5C4FCE1525EA5C4D003F90F8 /* ColorDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FCE1425EA5C4D003F90F8 /* ColorDayCell.swift */; };
 		5C4FCE1A25EA5CDD003F90F8 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FCE1925EA5CDD003F90F8 /* ColorView.swift */; };
 		5C4FCE2525EA5D4E003F90F8 /* MainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FCE2425EA5D4E003F90F8 /* MainConstants.swift */; };
+		5CBBCDEB25F1024D001D5628 /* AddColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBBCDEA25F1024D001D5628 /* AddColorView.swift */; };
+		5CBBCDF025F10402001D5628 /* SetColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBBCDEF25F10402001D5628 /* SetColorCell.swift */; };
+		5CBBCDF625F12F90001D5628 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBBCDF525F12F90001D5628 /* ViewExtension.swift */; };
+		5CBBCDFE25F130B5001D5628 /* LabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBBCDFD25F130B5001D5628 /* LabelExtension.swift */; };
+		5CBBCE0325F1319D001D5628 /* TextView Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBBCE0225F1319D001D5628 /* TextView Extension.swift */; };
+		5CBBCE0925F13280001D5628 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CBBCE0825F13280001D5628 /* SF-Pro.ttf */; };
+		5CBBCE0E25F13299001D5628 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5CBBCE0D25F13299001D5628 /* SF-Pro-Text-Medium.otf */; };
+		5CBBCE1325F132BB001D5628 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5CBBCE1225F132BB001D5628 /* SF-Pro-Text-Bold.otf */; };
 		5CE7B1CF25EBA7CA00438B5B /* TimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7B1CE25EBA7CA00438B5B /* TimeFunctions.swift */; };
 		5CFD7BC525F0B65600C27A50 /* DataFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD7BC425F0B65600C27A50 /* DataFunction.swift */; };
 		96BECB81B735A3262D975364 /* Pods_Calmy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE26A5E0E3F8916D10D8639 /* Pods_Calmy.framework */; };
@@ -72,6 +80,14 @@
 		5C4FCE1425EA5C4D003F90F8 /* ColorDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDayCell.swift; sourceTree = "<group>"; };
 		5C4FCE1925EA5CDD003F90F8 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		5C4FCE2425EA5D4E003F90F8 /* MainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstants.swift; sourceTree = "<group>"; };
+		5CBBCDEA25F1024D001D5628 /* AddColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddColorView.swift; sourceTree = "<group>"; };
+		5CBBCDEF25F10402001D5628 /* SetColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetColorCell.swift; sourceTree = "<group>"; };
+		5CBBCDF525F12F90001D5628 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		5CBBCDFD25F130B5001D5628 /* LabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtension.swift; sourceTree = "<group>"; };
+		5CBBCE0225F1319D001D5628 /* TextView Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextView Extension.swift"; sourceTree = "<group>"; };
+		5CBBCE0825F13280001D5628 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro.ttf"; path = "../../../../../../Library/Fonts/SF-Pro.ttf"; sourceTree = "<group>"; };
+		5CBBCE0D25F13299001D5628 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Medium.otf"; path = "../../../../../../Library/Fonts/SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		5CBBCE1225F132BB001D5628 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Bold.otf"; path = "../../../../../../Library/Fonts/SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		5CE7B1CE25EBA7CA00438B5B /* TimeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFunctions.swift; sourceTree = "<group>"; };
 		5CFD7BC425F0B65600C27A50 /* DataFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFunction.swift; sourceTree = "<group>"; };
 		A474C09E07D11C55E2C71281 /* Pods-Calmy-CalmyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calmy-CalmyUITests.release.xcconfig"; path = "Target Support Files/Pods-Calmy-CalmyUITests/Pods-Calmy-CalmyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				5C4FCE1425EA5C4D003F90F8 /* ColorDayCell.swift */,
+				5CBBCDEF25F10402001D5628 /* SetColorCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -137,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				5C4FCE1925EA5CDD003F90F8 /* ColorView.swift */,
+				5CBBCDEA25F1024D001D5628 /* AddColorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,6 +188,7 @@
 				5C016D7825F101CD0067042D /* Cell */,
 				5C016D7925F101DC0067042D /* View */,
 				5CFD7BBF25F0B62900C27A50 /* Core Data */,
+				5CBBCDF425F12F7B001D5628 /* Extensions */,
 				5CE7B1CE25EBA7CA00438B5B /* TimeFunctions.swift */,
 				5C4FCE2425EA5D4E003F90F8 /* MainConstants.swift */,
 				5C1FE5E025E7ED3A00611190 /* AppDelegate.swift */,
@@ -179,6 +198,7 @@
 				5C1FE5EB25E7ED3E00611190 /* LaunchScreen.storyboard */,
 				5C1FE5EE25E7ED3E00611190 /* Info.plist */,
 				5C2B72E325F0B2530061C47C /* Model.xcdatamodeld */,
+				5CBBCE0725F1322B001D5628 /* Fonts */,
 			);
 			path = Calmy;
 			sourceTree = "<group>";
@@ -199,6 +219,26 @@
 				5C1FE60425E7ED3E00611190 /* Info.plist */,
 			);
 			path = CalmyUITests;
+			sourceTree = "<group>";
+		};
+		5CBBCDF425F12F7B001D5628 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5CBBCDF525F12F90001D5628 /* ViewExtension.swift */,
+				5CBBCDFD25F130B5001D5628 /* LabelExtension.swift */,
+				5CBBCE0225F1319D001D5628 /* TextView Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5CBBCE0725F1322B001D5628 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5CBBCE0D25F13299001D5628 /* SF-Pro-Text-Medium.otf */,
+				5CBBCE1225F132BB001D5628 /* SF-Pro-Text-Bold.otf */,
+				5CBBCE0825F13280001D5628 /* SF-Pro.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		5CFD7BBF25F0B62900C27A50 /* Core Data */ = {
@@ -341,7 +381,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C1FE5ED25E7ED3E00611190 /* LaunchScreen.storyboard in Resources */,
+				5CBBCE0925F13280001D5628 /* SF-Pro.ttf in Resources */,
+				5CBBCE1325F132BB001D5628 /* SF-Pro-Text-Bold.otf in Resources */,
 				5C1FE5EA25E7ED3E00611190 /* Assets.xcassets in Resources */,
+				5CBBCE0E25F13299001D5628 /* SF-Pro-Text-Medium.otf in Resources */,
 				5C1FE5E825E7ED3A00611190 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,17 +513,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CBBCE0325F1319D001D5628 /* TextView Extension.swift in Sources */,
 				5C4FCE2525EA5D4E003F90F8 /* MainConstants.swift in Sources */,
 				5C2B72EB25F0B2890061C47C /* Model+CoreDataClass.swift in Sources */,
 				5C1FE5E525E7ED3A00611190 /* ViewController.swift in Sources */,
 				5C2B72EC25F0B2890061C47C /* Model+CoreDataProperties.swift in Sources */,
 				5CFD7BC525F0B65600C27A50 /* DataFunction.swift in Sources */,
 				5C1FE5E125E7ED3A00611190 /* AppDelegate.swift in Sources */,
+				5CBBCDFE25F130B5001D5628 /* LabelExtension.swift in Sources */,
 				5C2B72E525F0B2530061C47C /* Model.xcdatamodeld in Sources */,
 				5C4FCE1525EA5C4D003F90F8 /* ColorDayCell.swift in Sources */,
+				5CBBCDEB25F1024D001D5628 /* AddColorView.swift in Sources */,
 				5CE7B1CF25EBA7CA00438B5B /* TimeFunctions.swift in Sources */,
+				5CBBCDF625F12F90001D5628 /* ViewExtension.swift in Sources */,
 				5C1FE5E325E7ED3A00611190 /* SceneDelegate.swift in Sources */,
 				5C4FCE1A25EA5CDD003F90F8 /* ColorView.swift in Sources */,
+				5CBBCDF025F10402001D5628 /* SetColorCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -40,11 +40,23 @@ class ViewController: UIViewController {
         return table
     }()
     
+    let addColorView: AddColorView = {
+        let view = AddColorView(frame: CGRect(x: 0, y: 0, width: MainConstants.screenWidth, height: 600))
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.isHidden = true
+        return view
+    }()
+    
     
     override func viewDidLoad() {
         view.backgroundColor = Colors.pink
         SetSubviews()
         ActivateLayouts()
+    }
+    
+    
+    @objc func ShowAddColorView(){
+        addColorView.isHidden = false
     }
 }
 
@@ -78,7 +90,10 @@ extension ViewController {
     func SetSubviews(){
         view.addSubview(mainView)
         view.addSubview(colorTable)
+        view.addSubview(addColorView)
         mainView.addSubview(buttonImage)
+        
+        mainView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ShowAddColorView)))
     }
     
     func ActivateLayouts(){
@@ -96,7 +111,12 @@ extension ViewController {
             buttonImage.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
             buttonImage.centerYAnchor.constraint(equalTo: mainView.centerYAnchor, constant: -3),
             buttonImage.heightAnchor.constraint(equalToConstant: buttonImage.frame.height),
-            buttonImage.widthAnchor.constraint(equalToConstant: buttonImage.frame.width)
+            buttonImage.widthAnchor.constraint(equalToConstant: buttonImage.frame.width),
+            
+            addColorView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            addColorView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            addColorView.heightAnchor.constraint(equalToConstant: addColorView.frame.height),
+            addColorView.widthAnchor.constraint(equalToConstant: addColorView.frame.width),
         ])
     }
 }
