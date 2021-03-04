@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E3F0D43DB56F098F10641B5 /* Pods_Calmy_CalmyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D775FB2A36CD0C6CD6800D /* Pods_Calmy_CalmyUITests.framework */; };
 		5C1FE5E125E7ED3A00611190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FE5E025E7ED3A00611190 /* AppDelegate.swift */; };
 		5C1FE5E325E7ED3A00611190 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FE5E225E7ED3A00611190 /* SceneDelegate.swift */; };
 		5C1FE5E525E7ED3A00611190 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FE5E425E7ED3A00611190 /* ViewController.swift */; };
@@ -23,6 +24,8 @@
 		5C4FCE2525EA5D4E003F90F8 /* MainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FCE2425EA5D4E003F90F8 /* MainConstants.swift */; };
 		5CE7B1CF25EBA7CA00438B5B /* TimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7B1CE25EBA7CA00438B5B /* TimeFunctions.swift */; };
 		5CFD7BC525F0B65600C27A50 /* DataFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD7BC425F0B65600C27A50 /* DataFunction.swift */; };
+		96BECB81B735A3262D975364 /* Pods_Calmy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE26A5E0E3F8916D10D8639 /* Pods_Calmy.framework */; };
+		C28EBBAC4D1CBB324FAEEDB5 /* Pods_CalmyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A9ED195B30C6D5AEF9325AB /* Pods_CalmyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		052A864561CE10C842C3E0E6 /* Pods-Calmy-CalmyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calmy-CalmyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Calmy-CalmyUITests/Pods-Calmy-CalmyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0BF07E93F182554D3978A7A6 /* Pods-Calmy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calmy.debug.xcconfig"; path = "Target Support Files/Pods-Calmy/Pods-Calmy.debug.xcconfig"; sourceTree = "<group>"; };
+		390D1F3DF5F18A974C0BDB4B /* Pods-CalmyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalmyTests.debug.xcconfig"; path = "Target Support Files/Pods-CalmyTests/Pods-CalmyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3CE26A5E0E3F8916D10D8639 /* Pods_Calmy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calmy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4844C909542E1750406E81DC /* Pods-CalmyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalmyTests.release.xcconfig"; path = "Target Support Files/Pods-CalmyTests/Pods-CalmyTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A9ED195B30C6D5AEF9325AB /* Pods_CalmyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalmyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1FE5DD25E7ED3A00611190 /* Calmy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calmy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1FE5E025E7ED3A00611190 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C1FE5E225E7ED3A00611190 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +74,9 @@
 		5C4FCE2425EA5D4E003F90F8 /* MainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstants.swift; sourceTree = "<group>"; };
 		5CE7B1CE25EBA7CA00438B5B /* TimeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFunctions.swift; sourceTree = "<group>"; };
 		5CFD7BC425F0B65600C27A50 /* DataFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFunction.swift; sourceTree = "<group>"; };
+		A474C09E07D11C55E2C71281 /* Pods-Calmy-CalmyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calmy-CalmyUITests.release.xcconfig"; path = "Target Support Files/Pods-Calmy-CalmyUITests/Pods-Calmy-CalmyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C831BDD990AFEA7ABC100BCC /* Pods-Calmy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calmy.release.xcconfig"; path = "Target Support Files/Pods-Calmy/Pods-Calmy.release.xcconfig"; sourceTree = "<group>"; };
+		D9D775FB2A36CD0C6CD6800D /* Pods_Calmy_CalmyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calmy_CalmyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96BECB81B735A3262D975364 /* Pods_Calmy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28EBBAC4D1CBB324FAEEDB5 /* Pods_CalmyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,12 +100,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E3F0D43DB56F098F10641B5 /* Pods_Calmy_CalmyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17CC7391F6E4500B9FFC704F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CE26A5E0E3F8916D10D8639 /* Pods_Calmy.framework */,
+				D9D775FB2A36CD0C6CD6800D /* Pods_Calmy_CalmyUITests.framework */,
+				5A9ED195B30C6D5AEF9325AB /* Pods_CalmyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5C1FE5D425E7ED3A00611190 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +124,8 @@
 				5C1FE5F625E7ED3E00611190 /* CalmyTests */,
 				5C1FE60125E7ED3E00611190 /* CalmyUITests */,
 				5C1FE5DE25E7ED3A00611190 /* Products */,
+				B4A34B241CA15439480F507C /* Pods */,
+				17CC7391F6E4500B9FFC704F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,6 +195,20 @@
 			path = "Core Data Functions";
 			sourceTree = "<group>";
 		};
+		B4A34B241CA15439480F507C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BF07E93F182554D3978A7A6 /* Pods-Calmy.debug.xcconfig */,
+				C831BDD990AFEA7ABC100BCC /* Pods-Calmy.release.xcconfig */,
+				052A864561CE10C842C3E0E6 /* Pods-Calmy-CalmyUITests.debug.xcconfig */,
+				A474C09E07D11C55E2C71281 /* Pods-Calmy-CalmyUITests.release.xcconfig */,
+				390D1F3DF5F18A974C0BDB4B /* Pods-CalmyTests.debug.xcconfig */,
+				4844C909542E1750406E81DC /* Pods-CalmyTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,9 +216,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C1FE60725E7ED3E00611190 /* Build configuration list for PBXNativeTarget "Calmy" */;
 			buildPhases = (
+				087BE2D03DB494D7E16E8531 /* [CP] Check Pods Manifest.lock */,
 				5C1FE5D925E7ED3A00611190 /* Sources */,
 				5C1FE5DA25E7ED3A00611190 /* Frameworks */,
 				5C1FE5DB25E7ED3A00611190 /* Resources */,
+				E3BC08D11BE9683F1E278CF7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,6 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C1FE60A25E7ED3E00611190 /* Build configuration list for PBXNativeTarget "CalmyTests" */;
 			buildPhases = (
+				379FF75D0F8C5939ED8E614A /* [CP] Check Pods Manifest.lock */,
 				5C1FE5EF25E7ED3E00611190 /* Sources */,
 				5C1FE5F025E7ED3E00611190 /* Frameworks */,
 				5C1FE5F125E7ED3E00611190 /* Resources */,
@@ -210,9 +254,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C1FE60D25E7ED3E00611190 /* Build configuration list for PBXNativeTarget "CalmyUITests" */;
 			buildPhases = (
+				E4A73DBFC05489156C4FDBFD /* [CP] Check Pods Manifest.lock */,
 				5C1FE5FA25E7ED3E00611190 /* Sources */,
 				5C1FE5FB25E7ED3E00611190 /* Frameworks */,
 				5C1FE5FC25E7ED3E00611190 /* Resources */,
+				ABCAF9B9FE991839CE255B6B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -292,6 +338,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		087BE2D03DB494D7E16E8531 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Calmy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		379FF75D0F8C5939ED8E614A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CalmyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABCAF9B9FE991839CE255B6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Calmy-CalmyUITests/Pods-Calmy-CalmyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Calmy-CalmyUITests/Pods-Calmy-CalmyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Calmy-CalmyUITests/Pods-Calmy-CalmyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3BC08D11BE9683F1E278CF7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Calmy/Pods-Calmy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Calmy/Pods-Calmy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Calmy/Pods-Calmy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4A73DBFC05489156C4FDBFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Calmy-CalmyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5C1FE5D925E7ED3A00611190 /* Sources */ = {
@@ -481,6 +630,7 @@
 		};
 		5C1FE60825E7ED3E00611190 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BF07E93F182554D3978A7A6 /* Pods-Calmy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -501,6 +651,7 @@
 		};
 		5C1FE60925E7ED3E00611190 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C831BDD990AFEA7ABC100BCC /* Pods-Calmy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -521,6 +672,7 @@
 		};
 		5C1FE60B25E7ED3E00611190 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 390D1F3DF5F18A974C0BDB4B /* Pods-CalmyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -543,6 +695,7 @@
 		};
 		5C1FE60C25E7ED3E00611190 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4844C909542E1750406E81DC /* Pods-CalmyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -565,6 +718,7 @@
 		};
 		5C1FE60E25E7ED3E00611190 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 052A864561CE10C842C3E0E6 /* Pods-Calmy-CalmyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -585,6 +739,7 @@
 		};
 		5C1FE60F25E7ED3E00611190 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A474C09E07D11C55E2C71281 /* Pods-Calmy-CalmyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

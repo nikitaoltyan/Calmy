@@ -1,0 +1,6 @@
+framework module Pods_Calmy {
+  umbrella header "Pods-Calmy-umbrella.h"
+
+  export *
+  module * { export * }
+}

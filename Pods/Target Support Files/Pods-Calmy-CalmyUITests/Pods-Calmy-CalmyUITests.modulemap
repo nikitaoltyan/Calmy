@@ -1,0 +1,6 @@
+framework module Pods_Calmy_CalmyUITests {
+  umbrella header "Pods-Calmy-CalmyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

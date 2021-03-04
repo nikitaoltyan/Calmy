@@ -1,0 +1,16 @@
+PODS:
+  - MHSoftUI (0.1.0)
+
+DEPENDENCIES:
+  - MHSoftUI
+
+SPEC REPOS:
+  trunk:
+    - MHSoftUI
+
+SPEC CHECKSUMS:
+  MHSoftUI: efa0704cbc30d118bbede29f19c35efeb0c8f4c3
+
+PODFILE CHECKSUM: d82cf49aa295d0bc3e3e92ee7f40edc33549abd7
+
+COCOAPODS: 1.9.3
