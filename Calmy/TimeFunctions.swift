@@ -11,8 +11,8 @@ import UIKit
 
 class TimeFunctions {
     
+    /// - returns: Proportion of passed minutes in this day per all minutes in day.
     static func GetTime() -> CGFloat{
-//        Function return proportion of passed minutes in this day per all minutes in day.
         let date = Date()
         let calendar = Calendar.current
         let hours = calendar.component(.hour, from: date)

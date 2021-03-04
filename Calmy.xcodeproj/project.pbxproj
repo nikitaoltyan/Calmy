@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -117,6 +117,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5C016D7725F101C30067042D /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5C1FE5E425E7ED3A00611190 /* ViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		5C016D7825F101CD0067042D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5C4FCE1425EA5C4D003F90F8 /* ColorDayCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5C016D7925F101DC0067042D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5C4FCE1925EA5CDD003F90F8 /* ColorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5C1FE5D425E7ED3A00611190 = {
 			isa = PBXGroup;
 			children = (
@@ -142,11 +166,10 @@
 		5C1FE5DF25E7ED3A00611190 /* Calmy */ = {
 			isa = PBXGroup;
 			children = (
-				5CFD7BC325F0B63F00C27A50 /* Core Data Functions */,
+				5C016D7725F101C30067042D /* View Controller */,
+				5C016D7825F101CD0067042D /* Cell */,
+				5C016D7925F101DC0067042D /* View */,
 				5CFD7BBF25F0B62900C27A50 /* Core Data */,
-				5C1FE5E425E7ED3A00611190 /* ViewController.swift */,
-				5C4FCE1425EA5C4D003F90F8 /* ColorDayCell.swift */,
-				5C4FCE1925EA5CDD003F90F8 /* ColorView.swift */,
 				5CE7B1CE25EBA7CA00438B5B /* TimeFunctions.swift */,
 				5C4FCE2425EA5D4E003F90F8 /* MainConstants.swift */,
 				5C1FE5E025E7ED3A00611190 /* AppDelegate.swift */,
@@ -181,6 +204,7 @@
 		5CFD7BBF25F0B62900C27A50 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				5CFD7BC325F0B63F00C27A50 /* Core Data Functions */,
 				5C2B72E925F0B2890061C47C /* Model+CoreDataClass.swift */,
 				5C2B72EA25F0B2890061C47C /* Model+CoreDataProperties.swift */,
 			);
@@ -205,7 +229,6 @@
 				390D1F3DF5F18A974C0BDB4B /* Pods-CalmyTests.debug.xcconfig */,
 				4844C909542E1750406E81DC /* Pods-CalmyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

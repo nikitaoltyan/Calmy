@@ -6,16 +6,26 @@
 //
 
 import UIKit
+import MHSoftUI
 import CoreData
 
 class ViewController: UIViewController {
     
     let mainView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
-        view.backgroundColor = UIColor(red: 255/255, green: 245/255, blue: 235/255, alpha: 1)
+        view.backgroundColor = Colors.pink
+        view.addSoftUIEffectForView(cornerRadius: 150/2, themeColor: Colors.pink)
         view.layer.cornerRadius = 150/2
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
+    }()
+    
+    let buttonImage: UIImageView = {
+        let image = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        image.image = UIImage(named: "Ohm")
+        image.tintColor = Colors.shadow
+        image.translatesAutoresizingMaskIntoConstraints = false
+        return image
     }()
     
     lazy var colorTable: UITableView = {
@@ -68,6 +78,7 @@ extension ViewController {
     func SetSubviews(){
         view.addSubview(mainView)
         view.addSubview(colorTable)
+        mainView.addSubview(buttonImage)
     }
     
     func ActivateLayouts(){
@@ -80,7 +91,12 @@ extension ViewController {
             mainView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
             mainView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             mainView.heightAnchor.constraint(equalToConstant: mainView.frame.height),
-            mainView.widthAnchor.constraint(equalToConstant: mainView.frame.width)
+            mainView.widthAnchor.constraint(equalToConstant: mainView.frame.width),
+            
+            buttonImage.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
+            buttonImage.centerYAnchor.constraint(equalTo: mainView.centerYAnchor, constant: -3),
+            buttonImage.heightAnchor.constraint(equalToConstant: buttonImage.frame.height),
+            buttonImage.widthAnchor.constraint(equalToConstant: buttonImage.frame.width)
         ])
     }
 }
