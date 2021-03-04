@@ -30,13 +30,28 @@ class ViewController: UIViewController {
         return table
     }()
     
-//    var context = NSManaged
+    // Referece to database
+//    var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+//    Data object
+//    var items: [ColorData]?
     
     
     override func viewDidLoad() {
         view.backgroundColor = Colors.pink
         SetSubviews()
         ActivateLayouts()
+
+        DataFunction.DeleteAll()
+        
+        var a = DataFunction.FetchData()
+        print("a: \(a)")
+        
+        DataFunction.AddDataToModel(name: "Nikita", age: 20)
+        DataFunction.AddDataToModel(name: "Rita", age: 21)
+        a = DataFunction.FetchData()
+        print("a: \(a)")
+        
     }
 }
 
