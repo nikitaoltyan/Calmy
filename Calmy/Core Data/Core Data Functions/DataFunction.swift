@@ -31,10 +31,10 @@ class DataFunction {
     /// Add give data in model.
     /// - warning: Only for "Model" Data Model.
     static func AddDataToModel(name: String, age: Int32, arr: [NSNumber]){
-        let newName = Model(context: managedContext)
-        newName.name = name
-        newName.age = age
-        newName.arr = arr
+        let newStamp = Model(context: managedContext)
+//        newName.name = name
+//        newName.age = age
+//        newName.arr = arr
         try! managedContext.save()
     }
     
@@ -65,12 +65,12 @@ class DataFunction {
         request.returnsObjectsAsFaults = false
         do {
             let data = try managedContext.fetch(request)
-            print("Got data: \(data)")
-            var arr = data[0].arr
-            print("Arr: \(arr), count: \(arr.count)")
-            arr.insert(99, at: arr.count-1)
-            print("Arr: \(arr), count: \(arr.count)")
-            data[0].setValue(arr, forKey: "arr")
+//            print("Got data: \(data)")
+//            var arr = data[0].arr
+//            print("Arr: \(arr), count: \(arr.count)")
+//            arr.insert(99, at: arr.count-1)
+//            print("Arr: \(arr), count: \(arr.count)")
+//            data[0].setValue(arr, forKey: "arr")
             try! managedContext.save()
         } catch {
             print(error)

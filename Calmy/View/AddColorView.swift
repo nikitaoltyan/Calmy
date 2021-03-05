@@ -25,6 +25,7 @@ class AddColorView: UIView {
         return collection
     }()
     
+    var delegate: AddColorViewProtocol?
     let colors: Array<UIColor> = [ChoosableColors.charcoal,
                                   ChoosableColors.persianGreen,
                                   ChoosableColors.orangeYellowCrayola,
@@ -61,10 +62,21 @@ extension AddColorView: UICollectionViewDelegate, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collection.dequeueReusableCell(withReuseIdentifier: "SetColorCell", for: indexPath) as! SetColorCell
         cell.colorView.backgroundColor = colors[indexPath.row]
+        cell.delegate = self
         return cell
     }
     
     
+}
+
+
+
+
+
+extension AddColorView: SetColorCellProtocol {
+    func CloseView() {
+        delegate?.CloseView()
+    }
 }
 
 

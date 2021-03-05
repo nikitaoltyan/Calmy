@@ -40,10 +40,11 @@ class ViewController: UIViewController {
         return table
     }()
     
-    let addColorView: AddColorView = {
+    lazy var addColorView: AddColorView = {
         let view = AddColorView(frame: CGRect(x: 0, y: 0, width: MainConstants.screenWidth, height: 650))
             .with(cornerRadius: 15)
             .with(bgColor: Colors.pink)
+        view.delegate = self
         view.clipsToBounds = true
         view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -88,6 +89,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 
 
+extension ViewController: AddColorViewProtocol {
+    func CloseView() {
+        addColorView.isHidden = true
+    }
+}
+
+
+
+
+
 
 
 extension ViewController {
@@ -123,4 +134,16 @@ extension ViewController {
             addColorView.widthAnchor.constraint(equalToConstant: addColorView.frame.width),
         ])
     }
+}
+
+
+
+
+
+protocol SetColorCellProtocol {
+    func CloseView()
+}
+
+protocol AddColorViewProtocol {
+    func CloseView()
 }

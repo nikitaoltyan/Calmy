@@ -56,6 +56,8 @@ class SetColorCell: UICollectionViewCell {
         return label
     }()
     
+    var delegate: SetColorCellProtocol?
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -72,6 +74,7 @@ class SetColorCell: UICollectionViewCell {
     
     @objc func AddColor() {
         print("Add color")
+        delegate?.CloseView()
     }
 }
 
