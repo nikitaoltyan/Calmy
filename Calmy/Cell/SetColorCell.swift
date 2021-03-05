@@ -11,6 +11,7 @@ class SetColorCell: UICollectionViewCell {
     
     lazy var colorView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.width*4/5, height: self.frame.height/3))
+            .with(cornerRadius: 23)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -67,6 +68,11 @@ class SetColorCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    
+    @objc func AddColor() {
+        print("Add color")
+    }
 }
 
 
@@ -79,6 +85,8 @@ extension SetColorCell {
         self.addSubview(desc)
         self.addSubview(buttonView)
         buttonView.addSubview(selectLabel)
+        
+        buttonView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(AddColor)))
     }
     
     func ActivateLayouts(){
