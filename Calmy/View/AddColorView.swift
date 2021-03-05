@@ -25,6 +25,11 @@ class AddColorView: UIView {
         return collection
     }()
     
+    let colors: Array<UIColor> = [ChoosableColors.charcoal,
+                                  ChoosableColors.persianGreen,
+                                  ChoosableColors.orangeYellowCrayola,
+                                  ChoosableColors.sandyBrown,
+                                  ChoosableColors.burntSienna,]
     
     
     override init(frame: CGRect) {
@@ -46,15 +51,16 @@ class AddColorView: UIView {
 extension AddColorView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: MainConstants.screenWidth*3/4, height: self.frame.height-55)
+        return CGSize(width: MainConstants.screenWidth*3/4, height: self.frame.height-75)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        4
+        return colors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collection.dequeueReusableCell(withReuseIdentifier: "SetColorCell", for: indexPath) as! SetColorCell
+        cell.colorView.addSoftUIEffectForView(cornerRadius: 15, themeColor: colors[indexPath.row])
         return cell
     }
     
@@ -74,7 +80,7 @@ extension AddColorView {
     
     func ActivateLayouts(){
         NSLayoutConstraint.activate([
-            collection.topAnchor.constraint(equalTo: self.topAnchor, constant: -40),
+            collection.topAnchor.constraint(equalTo: self.topAnchor, constant: 25),
             collection.leftAnchor.constraint(equalTo: self.leftAnchor),
             collection.rightAnchor.constraint(equalTo: self.rightAnchor),
             collection.heightAnchor.constraint(equalToConstant: self.frame.height - 40)

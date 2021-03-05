@@ -11,7 +11,6 @@ class SetColorCell: UICollectionViewCell {
     
     lazy var colorView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.width*4/5, height: self.frame.height/3))
-        view.addSoftUIEffectForView(cornerRadius: 15, themeColor: .white)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -41,16 +40,25 @@ class SetColorCell: UICollectionViewCell {
     
     lazy var buttonView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.width*4/5, height: 60))
-        view.addSoftUIEffectForView(cornerRadius: 10, themeColor: .white)
+        view.addSoftUIEffectForView(cornerRadius: 10, themeColor: Colors.pink)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
+    let selectLabel: UILabel = {
+        let label = UILabel()
+            .with(color: Colors.shadow)
+            .with(alignment: .center)
+            .with(fontName: "Helvetica-Bold", size: 24)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Выбрать"
+        return label
+    }()
     
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = Colors.pink
+        self.backgroundColor = .clear
         SetSubview()
         ActivateLayouts()
     }
@@ -70,6 +78,7 @@ extension SetColorCell {
         self.addSubview(colorLabel)
         self.addSubview(desc)
         self.addSubview(buttonView)
+        buttonView.addSubview(selectLabel)
     }
     
     func ActivateLayouts(){
@@ -90,6 +99,9 @@ extension SetColorCell {
             buttonView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             buttonView.heightAnchor.constraint(equalToConstant: buttonView.frame.height),
             buttonView.widthAnchor.constraint(equalToConstant: buttonView.frame.width),
+            
+            selectLabel.centerXAnchor.constraint(equalTo: buttonView.centerXAnchor),
+            selectLabel.centerYAnchor.constraint(equalTo: buttonView.centerYAnchor)
         ])
     }
 }

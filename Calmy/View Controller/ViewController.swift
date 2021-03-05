@@ -41,7 +41,11 @@ class ViewController: UIViewController {
     }()
     
     let addColorView: AddColorView = {
-        let view = AddColorView(frame: CGRect(x: 0, y: 0, width: MainConstants.screenWidth, height: 600))
+        let view = AddColorView(frame: CGRect(x: 0, y: 0, width: MainConstants.screenWidth, height: 650))
+            .with(cornerRadius: 15)
+            .with(bgColor: Colors.pink)
+        view.clipsToBounds = true
+        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isHidden = true
         return view
