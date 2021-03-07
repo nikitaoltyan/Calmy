@@ -56,12 +56,17 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        NotificationCenter.default.addObserver(self, selector: #selector(FetchData), name: UIApplication.willEnterForegroundNotification, object: nil)
         view.backgroundColor = Colors.pink
         SetSubviews()
         ActivateLayouts()
-        model = DataFunction.FetchData()
+        FetchData()
     }
     
+    @objc func FetchData(){
+        model = DataFunction.FetchData()
+        colorTable.reloadData()
+    }
     
     @objc func ShowAddColorView(){
         addColorView.isHidden = false
@@ -84,7 +89,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = colorTable.dequeueReusableCell(withIdentifier: "ColorDayCell", for: indexPath) as! ColorDayCell
-        print("For cell \(indexPath.row) data is: \(model?[indexPath.row])")
+        cell.UpdateColorView(proportions: model?[indexPath.row].proportions,
+                             colors: model?[indexPath.row].colors)
         return cell
     }
 }
@@ -100,6 +106,7 @@ extension ViewController: AddColorViewProtocol {
     
     func AddData(proportion: Double, color: String, forDate date: String) {
         DataFunction.Add(proportion: proportion, color: color, date: date)
+        FetchData()
     }
 }
 

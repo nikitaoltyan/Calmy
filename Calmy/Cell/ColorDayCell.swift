@@ -11,7 +11,6 @@ class ColorDayCell: UITableViewCell {
 
     let colorView: ColorView = {
         let view = ColorView()
-        view.proportion = TimeFunctions.GetTime()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .blue
         return view
@@ -25,6 +24,12 @@ class ColorDayCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError()
+    }
+    
+    func UpdateColorView(proportions: [Double]?, colors: [String]?) {
+        colorView.proportions = proportions
+        colorView.colors = colors
+        colorView.setNeedsDisplay()
     }
 }
 
