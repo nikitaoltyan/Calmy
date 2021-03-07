@@ -16,9 +16,9 @@ extension Model {
         return NSFetchRequest<Model>(entityName: "Model")
     }
 
-    @NSManaged public var day: Date?
+    @NSManaged public var day: String?
     @NSManaged public var colors: [String]?
-    @NSManaged public var proportions: [NSNumber]?
+    @NSManaged public var proportions: [Double]?
 
 }
 

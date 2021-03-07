@@ -26,11 +26,11 @@ class AddColorView: UIView {
     }()
     
     var delegate: AddColorViewProtocol?
-    let colors: Array<UIColor> = [ChoosableColors.charcoal,
-                                  ChoosableColors.persianGreen,
-                                  ChoosableColors.orangeYellowCrayola,
-                                  ChoosableColors.sandyBrown,
-                                  ChoosableColors.burntSienna,]
+    let colors: Array<String> = ["charcoal",
+                                  "persianGreen",
+                                  "orangeYellowCrayola",
+                                  "sandyBrown",
+                                  "burntSienna",]
     
     
     override init(frame: CGRect) {
@@ -61,7 +61,8 @@ extension AddColorView: UICollectionViewDelegate, UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collection.dequeueReusableCell(withReuseIdentifier: "SetColorCell", for: indexPath) as! SetColorCell
-        cell.colorView.backgroundColor = colors[indexPath.row]
+        cell.colorView.backgroundColor = UIColor(named: colors[indexPath.row])
+        cell.color = colors[indexPath.row]
         cell.delegate = self
         return cell
     }
@@ -76,6 +77,10 @@ extension AddColorView: UICollectionViewDelegate, UICollectionViewDataSource, UI
 extension AddColorView: SetColorCellProtocol {
     func CloseView() {
         delegate?.CloseView()
+    }
+    
+    func AddData(proportion: Double, color: String, forDate date: String) {
+        delegate?.AddData(proportion: proportion, color: color, forDate: date)
     }
 }
 

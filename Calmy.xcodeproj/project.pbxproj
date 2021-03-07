@@ -30,6 +30,7 @@
 		5CBBCE0925F13280001D5628 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CBBCE0825F13280001D5628 /* SF-Pro.ttf */; };
 		5CBBCE0E25F13299001D5628 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5CBBCE0D25F13299001D5628 /* SF-Pro-Text-Medium.otf */; };
 		5CBBCE1325F132BB001D5628 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5CBBCE1225F132BB001D5628 /* SF-Pro-Text-Bold.otf */; };
+		5CC4B10925F3524C00FA3078 /* Date Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4B10825F3524C00FA3078 /* Date Extension.swift */; };
 		5CE7B1CF25EBA7CA00438B5B /* TimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7B1CE25EBA7CA00438B5B /* TimeFunctions.swift */; };
 		5CFD7BC525F0B65600C27A50 /* DataFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD7BC425F0B65600C27A50 /* DataFunction.swift */; };
 		96BECB81B735A3262D975364 /* Pods_Calmy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE26A5E0E3F8916D10D8639 /* Pods_Calmy.framework */; };
@@ -88,6 +89,7 @@
 		5CBBCE0825F13280001D5628 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro.ttf"; path = "../../../../../../Library/Fonts/SF-Pro.ttf"; sourceTree = "<group>"; };
 		5CBBCE0D25F13299001D5628 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Medium.otf"; path = "../../../../../../Library/Fonts/SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		5CBBCE1225F132BB001D5628 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Bold.otf"; path = "../../../../../../Library/Fonts/SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		5CC4B10825F3524C00FA3078 /* Date Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date Extension.swift"; sourceTree = "<group>"; };
 		5CE7B1CE25EBA7CA00438B5B /* TimeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFunctions.swift; sourceTree = "<group>"; };
 		5CFD7BC425F0B65600C27A50 /* DataFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFunction.swift; sourceTree = "<group>"; };
 		A474C09E07D11C55E2C71281 /* Pods-Calmy-CalmyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calmy-CalmyUITests.release.xcconfig"; path = "Target Support Files/Pods-Calmy-CalmyUITests/Pods-Calmy-CalmyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				5CBBCDF525F12F90001D5628 /* ViewExtension.swift */,
 				5CBBCDFD25F130B5001D5628 /* LabelExtension.swift */,
 				5CBBCE0225F1319D001D5628 /* TextView Extension.swift */,
+				5CC4B10825F3524C00FA3078 /* Date Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				5CBBCDFE25F130B5001D5628 /* LabelExtension.swift in Sources */,
 				5C2B72E525F0B2530061C47C /* Model.xcdatamodeld in Sources */,
 				5C4FCE1525EA5C4D003F90F8 /* ColorDayCell.swift in Sources */,
+				5CC4B10925F3524C00FA3078 /* Date Extension.swift in Sources */,
 				5CBBCDEB25F1024D001D5628 /* AddColorView.swift in Sources */,
 				5CE7B1CF25EBA7CA00438B5B /* TimeFunctions.swift in Sources */,
 				5CBBCDF625F12F90001D5628 /* ViewExtension.swift in Sources */,

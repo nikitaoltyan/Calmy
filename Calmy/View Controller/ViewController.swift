@@ -52,16 +52,24 @@ class ViewController: UIViewController {
         return view
     }()
     
+    var model: [Model]?
+    var proportionsExample: Array<Double> = []
+    var colorsExample: Array<String> = []
+    var date: String?
+    
     
     override func viewDidLoad() {
         view.backgroundColor = Colors.pink
         SetSubviews()
         ActivateLayouts()
+        model = DataFunction.FetchData()
     }
     
     
     @objc func ShowAddColorView(){
         addColorView.isHidden = false
+        print(model)
+        print("Proportions: \(proportionsExample)\nColors: \(colorsExample)\nDate: \(date)")
     }
 }
 
@@ -72,7 +80,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        return model?.count ?? 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -81,6 +89,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = colorTable.dequeueReusableCell(withIdentifier: "ColorDayCell", for: indexPath) as! ColorDayCell
+        print("For cell \(indexPath.row) data is: \(model?[indexPath.row])")
         return cell
     }
 }
@@ -92,6 +101,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController: AddColorViewProtocol {
     func CloseView() {
         addColorView.isHidden = true
+    }
+    
+    func AddData(proportion: Double, color: String, forDate date: String) {
+        if proportionsExample.count == 0 {
+            proportionsExample.append(proportion)
+        } else {
+            let sum = proportionsExample.reduce(0, +)
+            proportionsExample.append(proportion - sum)
+        }
+        colorsExample.append(color)
+        self.date = date
+        DataFunction.AddDataToModel(proportions: proportionsExample, colors: colorsExample, date: date)
     }
 }
 
@@ -142,8 +163,10 @@ extension ViewController {
 
 protocol SetColorCellProtocol {
     func CloseView()
+    func AddData(proportion: Double, color: String, forDate date: String)
 }
 
 protocol AddColorViewProtocol {
     func CloseView()
+    func AddData(proportion: Double, color: String, forDate date: String)
 }
