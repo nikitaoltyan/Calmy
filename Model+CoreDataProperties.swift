@@ -2,7 +2,7 @@
 //  Model+CoreDataProperties.swift
 //  Calmy
 //
-//  Created by Никита Олтян on 04.03.2021.
+//  Created by Никита Олтян on 07.03.2021.
 //
 //
 
@@ -16,8 +16,8 @@ extension Model {
         return NSFetchRequest<Model>(entityName: "Model")
     }
 
-    @NSManaged public var day: String?
     @NSManaged public var colors: [String]?
+    @NSManaged public var day: String?
     @NSManaged public var proportions: [Double]?
 
 }

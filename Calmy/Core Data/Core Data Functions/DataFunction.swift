@@ -52,8 +52,8 @@ class DataFunction {
     }
     
     
-    static func GetByName(name: String) {
-        request.predicate = NSPredicate(format: "name = %@", argumentArray: [name])
+    static func GetByDay(date: String) {
+        request.predicate = NSPredicate(format: "day = %@", argumentArray: [date])
         request.returnsObjectsAsFaults = false
         do {
             print( try managedContext.fetch(request) )
@@ -63,20 +63,22 @@ class DataFunction {
     }
     
 
-    static func Change(){
-        request.predicate = NSPredicate(format: "name = %@", argumentArray: ["Nikita"])
+    static func ChangeDataForDay(date: String, proportions: [Double], colors: [String]){
+        request.predicate = NSPredicate(format: "day = %@", argumentArray: [date])
         request.returnsObjectsAsFaults = false
         do {
-//            let data = try managedContext.fetch(request)
-//            print("Got data: \(data)")
-//            var arr = data[0].arr
-//            print("Arr: \(arr), count: \(arr.count)")
-//            arr.insert(99, at: arr.count-1)
-//            print("Arr: \(arr), count: \(arr.count)")
-//            data[0].setValue(arr, forKey: "arr")
+            let data = try managedContext.fetch(request)
+            print("Got data: \(data)")
+            data[0].setValue(colors, forKey: "colors")
+            data[0].setValue(proportions, forKey: "proportions")
             try! managedContext.save()
         } catch {
             print(error)
         }
+    }
+    
+    
+    static func Add(proportion: Double, color: String, date: String) {
+        
     }
 }

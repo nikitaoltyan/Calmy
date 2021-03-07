@@ -63,13 +63,14 @@ class ViewController: UIViewController {
         SetSubviews()
         ActivateLayouts()
         model = DataFunction.FetchData()
+        DataFunction.GetByDay(date: "8_March_2021")
     }
     
     
     @objc func ShowAddColorView(){
         addColorView.isHidden = false
         print(model)
-        print("Proportions: \(proportionsExample)\nColors: \(colorsExample)\nDate: \(date)")
+        print("Proportions: \(proportionsExample)\nColors: \(colorsExample)\nDate: \(date ?? " ")")
     }
 }
 
