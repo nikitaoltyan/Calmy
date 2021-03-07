@@ -52,23 +52,25 @@ class DataFunction {
     }
     
     
-    static func GetByDay(date: String) {
+    static func GetByDay(date: String) -> [Model]{
         request.predicate = NSPredicate(format: "day = %@", argumentArray: [date])
         request.returnsObjectsAsFaults = false
         do {
-            print( try managedContext.fetch(request) )
+            return try managedContext.fetch(request)
         } catch {
             print(error)
         }
+        return []
     }
     
 
-    static func ChangeDataForDay(date: String, proportions: [Double], colors: [String]){
+    static func ChangeDataForDay(date: String, proportions: [Double]?, colors: [String]?){
+        guard (proportions != nil) else { return }
+        guard (colors != nil) else { return }
         request.predicate = NSPredicate(format: "day = %@", argumentArray: [date])
         request.returnsObjectsAsFaults = false
         do {
             let data = try managedContext.fetch(request)
-            print("Got data: \(data)")
             data[0].setValue(colors, forKey: "colors")
             data[0].setValue(proportions, forKey: "proportions")
             try! managedContext.save()
@@ -79,6 +81,20 @@ class DataFunction {
     
     
     static func Add(proportion: Double, color: String, date: String) {
-        
+        let data = GetByDay(date: date)
+        if data.count == 1 {
+            var prop = data[0].proportions
+            var colors = data[0].colors
+            if prop?.count == 0 {
+                prop?.append(proportion)
+            } else {
+                let sum = prop?.reduce(0, +)
+                prop?.append(proportion - sum!)
+            }
+            colors?.append(color)
+            ChangeDataForDay(date: date, proportions: prop, colors: colors)
+        } else {
+            AddDataToModel(proportions: [proportion], colors: [color], date: date)
+        }
     }
 }

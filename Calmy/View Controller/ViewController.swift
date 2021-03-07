@@ -53,9 +53,6 @@ class ViewController: UIViewController {
     }()
     
     var model: [Model]?
-    var proportionsExample: Array<Double> = []
-    var colorsExample: Array<String> = []
-    var date: String?
     
     
     override func viewDidLoad() {
@@ -63,14 +60,11 @@ class ViewController: UIViewController {
         SetSubviews()
         ActivateLayouts()
         model = DataFunction.FetchData()
-        DataFunction.GetByDay(date: "8_March_2021")
     }
     
     
     @objc func ShowAddColorView(){
         addColorView.isHidden = false
-        print(model)
-        print("Proportions: \(proportionsExample)\nColors: \(colorsExample)\nDate: \(date ?? " ")")
     }
 }
 
@@ -105,15 +99,7 @@ extension ViewController: AddColorViewProtocol {
     }
     
     func AddData(proportion: Double, color: String, forDate date: String) {
-        if proportionsExample.count == 0 {
-            proportionsExample.append(proportion)
-        } else {
-            let sum = proportionsExample.reduce(0, +)
-            proportionsExample.append(proportion - sum)
-        }
-        colorsExample.append(color)
-        self.date = date
-        DataFunction.AddDataToModel(proportions: proportionsExample, colors: colorsExample, date: date)
+        DataFunction.Add(proportion: proportion, color: color, date: date)
     }
 }
 
