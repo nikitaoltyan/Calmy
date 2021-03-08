@@ -106,7 +106,7 @@ extension ViewController: AddColorViewProtocol {
     
     func AddData(proportion: Double, color: String, forDate date: String) {
         DataFunction.Add(proportion: proportion, color: color, date: date)
-        FetchData()
+        DispatchQueue.main.async{ self.FetchData() }
     }
 }
 
