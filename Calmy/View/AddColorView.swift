@@ -26,11 +26,12 @@ class AddColorView: UIView {
     }()
     
     var delegate: AddColorViewProtocol?
-    let colors: Array<String> = ["charcoal",
-                                  "persianGreen",
-                                  "orangeYellowCrayola",
-                                  "sandyBrown",
-                                  "burntSienna",]
+    let colors: Array<String> = ["black",
+                                "charcoal",
+                                "persianGreen",
+                                "orangeYellowCrayola",
+                                "sandyBrown",
+                                "burntSienna",]
     
     
     override init(frame: CGRect) {
