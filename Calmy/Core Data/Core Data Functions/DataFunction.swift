@@ -96,7 +96,25 @@ class DataFunction {
             colors?.append(color)
             ChangeDataForDay(date: date, proportions: prop, colors: colors)
         } else {
+            CloseDay(color: color)
             AddDataToModel(proportions: [proportion], colors: [color], date: date)
         }
+    }
+    
+    
+    private static func CloseDay(color: String) {
+        let data = FetchData()
+        var prop = data[data.count-1].proportions
+        var colors = data[data.count-1].colors
+        if prop?.count == 0 {
+            prop?.append(1)
+        } else {
+            let sum = prop?.reduce(0, +)
+            prop?.append(1 - sum!)
+        }
+        colors?.append(color)
+        data[data.count-1].setValue(colors, forKey: "colors")
+        data[data.count-1].setValue(prop, forKey: "proportions")
+        try! managedContext.save()
     }
 }
