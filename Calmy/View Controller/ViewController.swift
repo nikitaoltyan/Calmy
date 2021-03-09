@@ -52,6 +52,13 @@ class ViewController: UIViewController {
         return view
     }()
     
+    let dimView: UIView = {
+        let view = UIView()
+            .with(bgColor: UIColor.black.withAlphaComponent(0))
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     var model: [Model]?
     
     
@@ -69,6 +76,10 @@ class ViewController: UIViewController {
     }
     
     @objc func ShowAddColorView(){
+        dimView.isHidden = false
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
+            self.dimView.backgroundColor = self.dimView.backgroundColor?.withAlphaComponent(0.45)
+        }, completion: { finished in print("Animation completed")})
         addColorView.isHidden = false
     }
 }
@@ -101,6 +112,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ViewController: AddColorViewProtocol {
     func CloseView() {
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
+            self.dimView.backgroundColor = self.dimView.backgroundColor?.withAlphaComponent(0)
+        }, completion: { finished in
+            self.dimView.isHidden = true
+        })
         addColorView.isHidden = true
     }
     
@@ -120,10 +136,13 @@ extension ViewController {
     func SetSubviews(){
         view.addSubview(mainView)
         view.addSubview(colorTable)
+        view.addSubview(dimView)
         view.addSubview(addColorView)
         mainView.addSubview(buttonImage)
         
         mainView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ShowAddColorView)))
+        
+        dimView.isHidden = true
     }
     
     func ActivateLayouts(){
@@ -147,6 +166,11 @@ extension ViewController {
             addColorView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             addColorView.heightAnchor.constraint(equalToConstant: addColorView.frame.height),
             addColorView.widthAnchor.constraint(equalToConstant: addColorView.frame.width),
+            
+            dimView.topAnchor.constraint(equalTo: view.topAnchor),
+            dimView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            dimView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            dimView.rightAnchor.constraint(equalTo: view.rightAnchor)
         ])
     }
 }
