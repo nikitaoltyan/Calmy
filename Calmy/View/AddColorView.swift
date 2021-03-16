@@ -25,6 +25,15 @@ class AddColorView: UIView {
         return collection
     }()
     
+    let closeView: UIView = {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 35, height: 6))
+            .with(bgColor: Colors.shadow)
+            .with(cornerRadius: 3)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    
     var delegate: AddColorViewProtocol?
     let colors: Array<String> = ["black",
                                 "charcoal",
@@ -94,6 +103,7 @@ extension AddColorView {
     
     func SetSubviews(){
         self.addSubview(collection)
+        self.addSubview(closeView)
     }
     
     func ActivateLayouts(){
@@ -101,7 +111,12 @@ extension AddColorView {
             collection.topAnchor.constraint(equalTo: self.topAnchor, constant: 25),
             collection.leftAnchor.constraint(equalTo: self.leftAnchor),
             collection.rightAnchor.constraint(equalTo: self.rightAnchor),
-            collection.heightAnchor.constraint(equalToConstant: self.frame.height - 40)
+            collection.heightAnchor.constraint(equalToConstant: self.frame.height - 40),
+            
+            closeView.topAnchor.constraint(equalTo: self.topAnchor, constant: 7),
+            closeView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            closeView.widthAnchor.constraint(equalToConstant: closeView.frame.width),
+            closeView.heightAnchor.constraint(equalToConstant: closeView.frame.height),
         ])
     }
 }

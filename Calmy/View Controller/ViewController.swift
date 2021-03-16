@@ -141,8 +141,10 @@ extension ViewController: AddColorViewProtocol {
     }
     
     func AddData(proportion: Double, color: String, forDate date: String) {
-        DataFunction.Add(proportion: proportion, color: color, date: date)
-        DispatchQueue.main.async{ self.FetchData() }
+        DispatchQueue.main.async{
+            DataFunction.Add(proportion: proportion, color: color, date: date)
+            self.FetchData()
+        }
     }
 }
 
@@ -162,6 +164,9 @@ extension ViewController {
         
         mainView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ShowAddColorView)))
         dimView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(HideAddColorView)))
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(HideAddColorView))
+        swipeDown.direction = .down
+        addColorView.addGestureRecognizer(swipeDown)
         
         dimView.isHidden = true
     }

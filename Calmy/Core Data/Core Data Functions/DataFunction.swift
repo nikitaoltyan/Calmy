@@ -104,6 +104,7 @@ class DataFunction {
     
     private static func CloseDay(color: String) {
         let data = FetchData()
+        guard (data.count > 0) else { return }
         var prop = data[data.count-1].proportions
         var colors = data[data.count-1].colors
         if prop?.count == 0 {
