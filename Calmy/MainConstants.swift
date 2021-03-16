@@ -36,3 +36,29 @@ class ChoosableColors {
     static let burntSienna = UIColor(red: 231/255, green: 111/255, blue: 81/255, alpha: 1)
     
 }
+
+
+class Vibration {
+    
+    static func Soft() -> Void{
+        let soft = UIImpactFeedbackGenerator(style: .soft)
+        soft.impactOccurred()
+    }
+    
+    static func Light() -> Void{
+        let light = UIImpactFeedbackGenerator(style: .light)
+        light.impactOccurred()
+    }
+    
+    static func Medium() -> Void{
+        let medium = UIImpactFeedbackGenerator(style: .medium)
+        medium.impactOccurred()
+    }
+    
+    static func Heavy() -> Void{
+        let heavy = UIImpactFeedbackGenerator(style: .heavy)
+        heavy.impactOccurred()
+    }
+}
+
+// Access Token Github: 35de02dcdd611aa154bf75fe929cf047a770a9d3

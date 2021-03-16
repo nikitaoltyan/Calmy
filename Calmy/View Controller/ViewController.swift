@@ -70,17 +70,37 @@ class ViewController: UIViewController {
         FetchData()
     }
     
+    
+    
     @objc func FetchData(){
         model = DataFunction.FetchData()
         colorTable.reloadData()
     }
     
+    
     @objc func ShowAddColorView(){
-        dimView.isHidden = false
-        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
-            self.dimView.backgroundColor = self.dimView.backgroundColor?.withAlphaComponent(0.45)
-        }, completion: { finished in print("Animation completed")})
+        Vibration.Light()
+        addColorView.center.y = MainConstants.screenHeight + addColorView.frame.height/2
         addColorView.isHidden = false
+        dimView.isHidden = false
+        UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseOut, animations: {
+            self.dimView.backgroundColor = self.dimView.backgroundColor?.withAlphaComponent(0.45)
+            self.addColorView.center.y -= self.addColorView.frame.height
+        }, completion: { finished in
+            print("Animation completed")
+        })
+    }
+    
+    
+    @objc func HideAddColorView(){
+        Vibration.Light()
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+            self.addColorView.center.y += self.addColorView.frame.height
+            self.dimView.backgroundColor = self.dimView.backgroundColor?.withAlphaComponent(0)
+        }, completion: { finished in
+            self.dimView.isHidden = true
+            self.addColorView.isHidden = true
+        })
     }
 }
 
@@ -141,6 +161,7 @@ extension ViewController {
         mainView.addSubview(buttonImage)
         
         mainView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ShowAddColorView)))
+        dimView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(HideAddColorView)))
         
         dimView.isHidden = true
     }
