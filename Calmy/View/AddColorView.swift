@@ -35,12 +35,9 @@ class AddColorView: UIView {
     
     
     var delegate: AddColorViewProtocol?
-    let colors: Array<String> = ["black",
-                                "charcoal",
-                                "persianGreen",
-                                "orangeYellowCrayola",
-                                "sandyBrown",
-                                "burntSienna",]
+    let colors: Array<String> = ColorsData.colorsAssetsNames
+    let colorsNames: Array<String> = ColorsData.colorsNames
+    let colorsDesc: Array<String> = ColorsData.colorsDesc
     
     
     override init(frame: CGRect) {
@@ -73,6 +70,8 @@ extension AddColorView: UICollectionViewDelegate, UICollectionViewDataSource, UI
         let cell = collection.dequeueReusableCell(withReuseIdentifier: "SetColorCell", for: indexPath) as! SetColorCell
         cell.colorView.backgroundColor = UIColor(named: colors[indexPath.row])
         cell.color = colors[indexPath.row]
+        cell.colorLabel.text = colorsNames[indexPath.row]
+        cell.desc.text = colorsDesc[indexPath.row]
         cell.delegate = self
         return cell
     }

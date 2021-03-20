@@ -29,7 +29,7 @@ class SetColorCell: UICollectionViewCell {
     let desc: UITextView = {
         let view = UITextView()
             .with(bgColor: .clear)
-            .with(fontName: "Helvetica", size: 15)
+            .with(fontName: "Helvetica", size: 16)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isUserInteractionEnabled = false
         view.isScrollEnabled = false
@@ -105,11 +105,11 @@ extension SetColorCell {
             colorView.widthAnchor.constraint(equalToConstant: colorView.frame.width),
             
             colorLabel.topAnchor.constraint(equalTo: colorView.bottomAnchor, constant: 15),
-            colorLabel.leftAnchor.constraint(equalTo: colorView.leftAnchor),
+            colorLabel.leftAnchor.constraint(equalTo: colorView.leftAnchor, constant: -2),
             
             desc.topAnchor.constraint(equalTo: colorLabel.bottomAnchor, constant: 8),
-            desc.leftAnchor.constraint(equalTo: colorView.leftAnchor),
-            desc.rightAnchor.constraint(equalTo: colorView.rightAnchor),
+            desc.leftAnchor.constraint(equalTo: colorLabel.leftAnchor, constant: -3),
+            desc.rightAnchor.constraint(equalTo: colorView.rightAnchor, constant: 4),
             
             buttonView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30),
             buttonView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
