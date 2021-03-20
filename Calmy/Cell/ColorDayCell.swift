@@ -12,7 +12,7 @@ class ColorDayCell: UITableViewCell {
     let colorView: ColorView = {
         let view = ColorView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .blue
+        view.backgroundColor = Colors.pink
         return view
     }()
     
