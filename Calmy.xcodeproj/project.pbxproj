@@ -22,6 +22,7 @@
 		5C4FCE1525EA5C4D003F90F8 /* ColorDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FCE1425EA5C4D003F90F8 /* ColorDayCell.swift */; };
 		5C4FCE1A25EA5CDD003F90F8 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FCE1925EA5CDD003F90F8 /* ColorView.swift */; };
 		5C4FCE2525EA5D4E003F90F8 /* MainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FCE2425EA5D4E003F90F8 /* MainConstants.swift */; };
+		5CAB5C602619B58E00C97DE7 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB5C5F2619B58E00C97DE7 /* LogoView.swift */; };
 		5CAFAF2A2618F817003F5D88 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5CAFAF282618F817003F5D88 /* Model.xcdatamodeld */; };
 		5CBBCDEB25F1024D001D5628 /* AddColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBBCDEA25F1024D001D5628 /* AddColorView.swift */; };
 		5CBBCDF025F10402001D5628 /* SetColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBBCDEF25F10402001D5628 /* SetColorCell.swift */; };
@@ -86,6 +87,7 @@
 		5C4FCE1425EA5C4D003F90F8 /* ColorDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDayCell.swift; sourceTree = "<group>"; };
 		5C4FCE1925EA5CDD003F90F8 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		5C4FCE2425EA5D4E003F90F8 /* MainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstants.swift; sourceTree = "<group>"; };
+		5CAB5C5F2619B58E00C97DE7 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		5CAFAF292618F817003F5D88 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		5CBBCDEA25F1024D001D5628 /* AddColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddColorView.swift; sourceTree = "<group>"; };
 		5CBBCDEF25F10402001D5628 /* SetColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetColorCell.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				5C4FCE1925EA5CDD003F90F8 /* ColorView.swift */,
 				5CBBCDEA25F1024D001D5628 /* AddColorView.swift */,
+				5CAB5C5F2619B58E00C97DE7 /* LogoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				5C1FE5E525E7ED3A00611190 /* ViewController.swift in Sources */,
 				5CFD7BC525F0B65600C27A50 /* DataFunction.swift in Sources */,
 				5C3A2A3E26199BC200F1A6F5 /* Model+CoreDataProperties.swift in Sources */,
+				5CAB5C602619B58E00C97DE7 /* LogoView.swift in Sources */,
 				5C1FE5E125E7ED3A00611190 /* AppDelegate.swift in Sources */,
 				5CBBCDFE25F130B5001D5628 /* LabelExtension.swift in Sources */,
 				5CAFAF2A2618F817003F5D88 /* Model.xcdatamodeld in Sources */,

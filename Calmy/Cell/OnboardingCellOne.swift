@@ -9,10 +9,10 @@ import UIKit
 
 class OnboardingCellOne: UICollectionViewCell {
     
-    let iconImage: UIImageView = {
-        let image = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-        image.translatesAutoresizingMaskIntoConstraints = false
-        return image
+    let logoView: LogoView = {
+        let view = LogoView(frame: CGRect(x: 0, y: 0, width: MainConstants.screenWidth-90, height: 300))
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     let largeLabel: UILabel = {
@@ -28,6 +28,7 @@ class OnboardingCellOne: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = Colors.pink
         SetSubview()
         ActivateLayouts()
     }
@@ -43,16 +44,16 @@ class OnboardingCellOne: UICollectionViewCell {
 extension OnboardingCellOne {
     
     func SetSubview() {
-        self.addSubview(iconImage)
+        self.addSubview(logoView)
         self.addSubview(largeLabel)
     }
     
     func ActivateLayouts() {
         NSLayoutConstraint.activate([
-            iconImage.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            iconImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 120),
-            iconImage.heightAnchor.constraint(equalToConstant: iconImage.frame.height),
-            iconImage.widthAnchor.constraint(equalToConstant: iconImage.frame.width),
+            logoView.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 15),
+            logoView.topAnchor.constraint(equalTo: self.topAnchor, constant: 120),
+            logoView.heightAnchor.constraint(equalToConstant: logoView.frame.height),
+            logoView.widthAnchor.constraint(equalToConstant: logoView.frame.width),
             
             largeLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 35),
             largeLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -80)

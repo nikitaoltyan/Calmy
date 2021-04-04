@@ -54,13 +54,11 @@ extension OnboardingController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.row {
         case 0:
-            let cell = collection.dequeueReusableCell(withReuseIdentifier: "OnboardingCellTwo", for: indexPath) as! OnboardingCellTwo
-            cell.backgroundColor = .purple
+            let cell = collection.dequeueReusableCell(withReuseIdentifier: "OnboardingCellOne", for: indexPath) as! OnboardingCellOne
             return cell
         default:
-            let cell = collection.dequeueReusableCell(withReuseIdentifier: "OnboardingCellOne", for: indexPath) as! OnboardingCellOne
+            let cell = collection.dequeueReusableCell(withReuseIdentifier: "OnboardingCellTwo", for: indexPath) as! OnboardingCellTwo
             cell.largeLabel.text = "Welcome to the Mood-tracker app"
-            cell.backgroundColor = Colors.pink
             return cell
         }
     }
