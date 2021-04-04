@@ -77,9 +77,7 @@ class SetColorCell: UICollectionViewCell {
     @objc func AddColor() {
         print("Add color")
         delegate?.CloseView()
-        let date = Date()
-        let day: String = "\(date.day)_\(date.month)_\(date.year)"
-        delegate?.AddData(proportion: Double(TimeFunctions.GetTime()), color: color!, forDate: day)
+        delegate?.AddData(proportion: Double(TimeFunctions.GetTime()), color: color!, forDate: Date().onlyDate)
     }
 }
 

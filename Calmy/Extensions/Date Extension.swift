@@ -33,10 +33,12 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
-    func onlyDate() -> Date {
+    /// Returns only a date without time. Useable for CoreData.
+    /// - warning: optional
+    var onlyDate: Date? {
         let components = Calendar.current.dateComponents([.year, .month, .day], from: self)
         let date = Calendar.current.date(from: components)
-        return date!
+        return date
     }
 
 }

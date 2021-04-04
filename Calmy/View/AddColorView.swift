@@ -88,7 +88,7 @@ extension AddColorView: SetColorCellProtocol {
         delegate?.CloseView()
     }
     
-    func AddData(proportion: Double, color: String, forDate date: String) {
+    func AddData(proportion: Double, color: String, forDate date: Date?) {
         delegate?.AddData(proportion: proportion, color: color, forDate: date)
     }
 }

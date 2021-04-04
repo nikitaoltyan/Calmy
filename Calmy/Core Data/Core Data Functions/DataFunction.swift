@@ -32,7 +32,7 @@ class DataFunction {
     
     /// Add give data in model.
     /// - warning: Only for "Model" Data Model.
-    static func AddDataToModel(proportions: [Double], colors: [String], date: String?){
+    static func AddDataToModel(proportions: [Double], colors: [String], date: Date?){
         guard (date != nil) else { return }
         guard (proportions.count > 0) else { return }
         guard (colors.count > 0) else { return }
@@ -54,7 +54,7 @@ class DataFunction {
     }
     
     
-    static func GetByDay(date: String) -> [Model]{
+    static func GetByDay(date: Date) -> [Model]{
         request.predicate = NSPredicate(format: "day = %@", argumentArray: [date])
         request.returnsObjectsAsFaults = false
         do {
@@ -66,7 +66,7 @@ class DataFunction {
     }
     
 
-    static func ChangeDataForDay(date: String, proportions: [Double]?, colors: [String]?){
+    static func ChangeDataForDay(date: Date, proportions: [Double]?, colors: [String]?){
         guard (proportions != nil) else { return }
         guard (colors != nil) else { return }
         request.predicate = NSPredicate(format: "day = %@", argumentArray: [date])
@@ -82,8 +82,9 @@ class DataFunction {
     }
     
     
-    static func Add(proportion: Double, color: String, date: String) {
-        let data = GetByDay(date: date)
+    static func Add(proportion: Double, color: String, date: Date?) {
+        guard (date != nil) else { return }
+        let data = GetByDay(date: date!)
         if data.count == 1 {
             var prop = data[0].proportions
             var colors = data[0].colors
@@ -94,7 +95,7 @@ class DataFunction {
                 prop?.append(proportion - sum!)
             }
             colors?.append(color)
-            ChangeDataForDay(date: date, proportions: prop, colors: colors)
+            ChangeDataForDay(date: date!, proportions: prop, colors: colors)
         } else {
             CloseDay(color: color)
             AddDataToModel(proportions: [proportion], colors: [color], date: date)

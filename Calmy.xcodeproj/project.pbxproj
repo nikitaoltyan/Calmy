@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2E3F0D43DB56F098F10641B5 /* Pods_Calmy_CalmyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D775FB2A36CD0C6CD6800D /* Pods_Calmy_CalmyUITests.framework */; };
-		5C05950F25F4979D00AC5F4D /* Model+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05950D25F4979D00AC5F4D /* Model+CoreDataClass.swift */; };
-		5C05951025F4979D00AC5F4D /* Model+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05950E25F4979D00AC5F4D /* Model+CoreDataProperties.swift */; };
 		5C07A33F2605CE11005B50E1 /* ColorsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C07A33E2605CE11005B50E1 /* ColorsData.swift */; };
 		5C1FE5E125E7ED3A00611190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FE5E025E7ED3A00611190 /* AppDelegate.swift */; };
 		5C1FE5E325E7ED3A00611190 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FE5E225E7ED3A00611190 /* SceneDelegate.swift */; };
@@ -19,10 +17,12 @@
 		5C1FE5ED25E7ED3E00611190 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C1FE5EB25E7ED3E00611190 /* LaunchScreen.storyboard */; };
 		5C1FE5F825E7ED3E00611190 /* MoodyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FE5F725E7ED3E00611190 /* MoodyTests.swift */; };
 		5C1FE60325E7ED3E00611190 /* MoodyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1FE60225E7ED3E00611190 /* MoodyUITests.swift */; };
-		5C2B72E525F0B2530061C47C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B72E325F0B2530061C47C /* Model.xcdatamodeld */; };
+		5C3A2A3E26199BC200F1A6F5 /* Model+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3A2A3C26199BC200F1A6F5 /* Model+CoreDataProperties.swift */; };
+		5C3A2A3F26199BC200F1A6F5 /* Model+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3A2A3D26199BC200F1A6F5 /* Model+CoreDataClass.swift */; };
 		5C4FCE1525EA5C4D003F90F8 /* ColorDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FCE1425EA5C4D003F90F8 /* ColorDayCell.swift */; };
 		5C4FCE1A25EA5CDD003F90F8 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FCE1925EA5CDD003F90F8 /* ColorView.swift */; };
 		5C4FCE2525EA5D4E003F90F8 /* MainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FCE2425EA5D4E003F90F8 /* MainConstants.swift */; };
+		5CAFAF2A2618F817003F5D88 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5CAFAF282618F817003F5D88 /* Model.xcdatamodeld */; };
 		5CBBCDEB25F1024D001D5628 /* AddColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBBCDEA25F1024D001D5628 /* AddColorView.swift */; };
 		5CBBCDF025F10402001D5628 /* SetColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBBCDEF25F10402001D5628 /* SetColorCell.swift */; };
 		5CBBCDF625F12F90001D5628 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBBCDF525F12F90001D5628 /* ViewExtension.swift */; };
@@ -32,6 +32,10 @@
 		5CBBCE0E25F13299001D5628 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5CBBCE0D25F13299001D5628 /* SF-Pro-Text-Medium.otf */; };
 		5CBBCE1325F132BB001D5628 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5CBBCE1225F132BB001D5628 /* SF-Pro-Text-Bold.otf */; };
 		5CC4B10925F3524C00FA3078 /* Date Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4B10825F3524C00FA3078 /* Date Extension.swift */; };
+		5CE50FC526160405000811BD /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE50FC426160405000811BD /* OnboardingController.swift */; };
+		5CE50FCB26160458000811BD /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE50FCA26160458000811BD /* Defaults.swift */; };
+		5CE50FD326160705000811BD /* OnboardingCellOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE50FD226160705000811BD /* OnboardingCellOne.swift */; };
+		5CE50FD826160966000811BD /* OnboardingCellTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE50FD726160966000811BD /* OnboardingCellTwo.swift */; };
 		5CE7B1CF25EBA7CA00438B5B /* TimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE7B1CE25EBA7CA00438B5B /* TimeFunctions.swift */; };
 		5CFD7BC525F0B65600C27A50 /* DataFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD7BC425F0B65600C27A50 /* DataFunction.swift */; };
 		96BECB81B735A3262D975364 /* Pods_Calmy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE26A5E0E3F8916D10D8639 /* Pods_Calmy.framework */; };
@@ -62,8 +66,6 @@
 		3CE26A5E0E3F8916D10D8639 /* Pods_Calmy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calmy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4844C909542E1750406E81DC /* Pods-CalmyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalmyTests.release.xcconfig"; path = "Target Support Files/Pods-CalmyTests/Pods-CalmyTests.release.xcconfig"; sourceTree = "<group>"; };
 		5A9ED195B30C6D5AEF9325AB /* Pods_CalmyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalmyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C05950D25F4979D00AC5F4D /* Model+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		5C05950E25F4979D00AC5F4D /* Model+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		5C07A33E2605CE11005B50E1 /* ColorsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsData.swift; sourceTree = "<group>"; };
 		5C1FE5DD25E7ED3A00611190 /* Calmy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calmy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1FE5E025E7ED3A00611190 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,10 +81,12 @@
 		5C1FE5FE25E7ED3E00611190 /* CalmyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalmyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1FE60225E7ED3E00611190 /* MoodyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodyUITests.swift; sourceTree = "<group>"; };
 		5C1FE60425E7ED3E00611190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5C2B72E425F0B2530061C47C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		5C3A2A3C26199BC200F1A6F5 /* Model+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5C3A2A3D26199BC200F1A6F5 /* Model+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Model+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5C4FCE1425EA5C4D003F90F8 /* ColorDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDayCell.swift; sourceTree = "<group>"; };
 		5C4FCE1925EA5CDD003F90F8 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		5C4FCE2425EA5D4E003F90F8 /* MainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConstants.swift; sourceTree = "<group>"; };
+		5CAFAF292618F817003F5D88 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		5CBBCDEA25F1024D001D5628 /* AddColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddColorView.swift; sourceTree = "<group>"; };
 		5CBBCDEF25F10402001D5628 /* SetColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetColorCell.swift; sourceTree = "<group>"; };
 		5CBBCDF525F12F90001D5628 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
@@ -92,6 +96,10 @@
 		5CBBCE0D25F13299001D5628 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Medium.otf"; path = "../../../../../../Library/Fonts/SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		5CBBCE1225F132BB001D5628 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Bold.otf"; path = "../../../../../../Library/Fonts/SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		5CC4B10825F3524C00FA3078 /* Date Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date Extension.swift"; sourceTree = "<group>"; };
+		5CE50FC426160405000811BD /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
+		5CE50FCA26160458000811BD /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		5CE50FD226160705000811BD /* OnboardingCellOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCellOne.swift; sourceTree = "<group>"; };
+		5CE50FD726160966000811BD /* OnboardingCellTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCellTwo.swift; sourceTree = "<group>"; };
 		5CE7B1CE25EBA7CA00438B5B /* TimeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFunctions.swift; sourceTree = "<group>"; };
 		5CFD7BC425F0B65600C27A50 /* DataFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFunction.swift; sourceTree = "<group>"; };
 		A474C09E07D11C55E2C71281 /* Pods-Calmy-CalmyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calmy-CalmyUITests.release.xcconfig"; path = "Target Support Files/Pods-Calmy-CalmyUITests/Pods-Calmy-CalmyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				5C1FE5E425E7ED3A00611190 /* ViewController.swift */,
+				5CE50FC426160405000811BD /* OnboardingController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -150,6 +159,8 @@
 			children = (
 				5C4FCE1425EA5C4D003F90F8 /* ColorDayCell.swift */,
 				5CBBCDEF25F10402001D5628 /* SetColorCell.swift */,
+				5CE50FD226160705000811BD /* OnboardingCellOne.swift */,
+				5CE50FD726160966000811BD /* OnboardingCellTwo.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -199,6 +210,7 @@
 				5C016D7725F101C30067042D /* View Controller */,
 				5C016D7825F101CD0067042D /* Cell */,
 				5C016D7925F101DC0067042D /* View */,
+				5CE50FC92616043E000811BD /* User Defaults */,
 				5CFD7BBF25F0B62900C27A50 /* Core Data */,
 				5CBBCDF425F12F7B001D5628 /* Extensions */,
 				5C07A33D2605CDF7005B50E1 /* Colors Data */,
@@ -210,8 +222,8 @@
 				5C1FE5E925E7ED3E00611190 /* Assets.xcassets */,
 				5C1FE5EB25E7ED3E00611190 /* LaunchScreen.storyboard */,
 				5C1FE5EE25E7ED3E00611190 /* Info.plist */,
-				5C2B72E325F0B2530061C47C /* Model.xcdatamodeld */,
 				5CBBCE0725F1322B001D5628 /* Fonts */,
+				5CAFAF282618F817003F5D88 /* Model.xcdatamodeld */,
 			);
 			path = Calmy;
 			sourceTree = "<group>";
@@ -255,12 +267,20 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		5CE50FC92616043E000811BD /* User Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				5CE50FCA26160458000811BD /* Defaults.swift */,
+			);
+			path = "User Defaults";
+			sourceTree = "<group>";
+		};
 		5CFD7BBF25F0B62900C27A50 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				5C3A2A3D26199BC200F1A6F5 /* Model+CoreDataClass.swift */,
+				5C3A2A3C26199BC200F1A6F5 /* Model+CoreDataProperties.swift */,
 				5CFD7BC325F0B63F00C27A50 /* Core Data Functions */,
-				5C05950D25F4979D00AC5F4D /* Model+CoreDataClass.swift */,
-				5C05950E25F4979D00AC5F4D /* Model+CoreDataProperties.swift */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -528,21 +548,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CBBCE0325F1319D001D5628 /* TextView Extension.swift in Sources */,
+				5CE50FD826160966000811BD /* OnboardingCellTwo.swift in Sources */,
 				5C4FCE2525EA5D4E003F90F8 /* MainConstants.swift in Sources */,
 				5C1FE5E525E7ED3A00611190 /* ViewController.swift in Sources */,
 				5CFD7BC525F0B65600C27A50 /* DataFunction.swift in Sources */,
+				5C3A2A3E26199BC200F1A6F5 /* Model+CoreDataProperties.swift in Sources */,
 				5C1FE5E125E7ED3A00611190 /* AppDelegate.swift in Sources */,
 				5CBBCDFE25F130B5001D5628 /* LabelExtension.swift in Sources */,
-				5C2B72E525F0B2530061C47C /* Model.xcdatamodeld in Sources */,
+				5CAFAF2A2618F817003F5D88 /* Model.xcdatamodeld in Sources */,
 				5C4FCE1525EA5C4D003F90F8 /* ColorDayCell.swift in Sources */,
+				5CE50FD326160705000811BD /* OnboardingCellOne.swift in Sources */,
 				5CC4B10925F3524C00FA3078 /* Date Extension.swift in Sources */,
-				5C05951025F4979D00AC5F4D /* Model+CoreDataProperties.swift in Sources */,
-				5C05950F25F4979D00AC5F4D /* Model+CoreDataClass.swift in Sources */,
+				5CE50FC526160405000811BD /* OnboardingController.swift in Sources */,
+				5C3A2A3F26199BC200F1A6F5 /* Model+CoreDataClass.swift in Sources */,
 				5CBBCDEB25F1024D001D5628 /* AddColorView.swift in Sources */,
 				5CE7B1CF25EBA7CA00438B5B /* TimeFunctions.swift in Sources */,
 				5CBBCDF625F12F90001D5628 /* ViewExtension.swift in Sources */,
 				5C1FE5E325E7ED3A00611190 /* SceneDelegate.swift in Sources */,
 				5C07A33F2605CE11005B50E1 /* ColorsData.swift in Sources */,
+				5CE50FCB26160458000811BD /* Defaults.swift in Sources */,
 				5C4FCE1A25EA5CDD003F90F8 /* ColorView.swift in Sources */,
 				5CBBCDF025F10402001D5628 /* SetColorCell.swift in Sources */,
 			);
@@ -887,12 +911,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		5C2B72E325F0B2530061C47C /* Model.xcdatamodeld */ = {
+		5CAFAF282618F817003F5D88 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				5C2B72E425F0B2530061C47C /* Model.xcdatamodel */,
+				5CAFAF292618F817003F5D88 /* Model.xcdatamodel */,
 			);
-			currentVersion = 5C2B72E425F0B2530061C47C /* Model.xcdatamodel */;
+			currentVersion = 5CAFAF292618F817003F5D88 /* Model.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -140,7 +140,7 @@ extension ViewController: AddColorViewProtocol {
         addColorView.isHidden = true
     }
     
-    func AddData(proportion: Double, color: String, forDate date: String) {
+    func AddData(proportion: Double, color: String, forDate date: Date?) {
         DispatchQueue.main.async{
             DataFunction.Add(proportion: proportion, color: color, date: date)
             self.FetchData()
@@ -207,10 +207,10 @@ extension ViewController {
 
 protocol SetColorCellProtocol {
     func CloseView()
-    func AddData(proportion: Double, color: String, forDate date: String)
+    func AddData(proportion: Double, color: String, forDate date: Date?)
 }
 
 protocol AddColorViewProtocol {
     func CloseView()
-    func AddData(proportion: Double, color: String, forDate date: String)
+    func AddData(proportion: Double, color: String, forDate date: Date?)
 }
