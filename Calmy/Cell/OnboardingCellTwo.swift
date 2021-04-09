@@ -16,6 +16,7 @@ class OnboardingCellTwo: UICollectionViewCell {
             .with(numberOfLines: 2)
             .with(fontName: "Helvetica-Bold", size: 35)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Здесь нет ничего сложного"
         return label
     }()
     
@@ -24,10 +25,22 @@ class OnboardingCellTwo: UICollectionViewCell {
             .with(color: Colors.nearBlack)
             .with(alignment: .left)
             .with(numberOfLines: 0)
-            .with(fontName: "Helvetica", size: 24)
+            .with(fontName: "Helvetica", size: 19)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Просто выбирай цвет своего настроения, который ты чувствуешь сейчас. Можешь ориентироваться на описание, а можешь довериться своей интуиции. Дерзай!"
         return label
     }()
+    
+    let nextButton: ButtonView = {
+        let view = ButtonView(frame: CGRect(x: 0, y: 0, width: MainConstants.screenWidth-70, height: 53))
+            .with(cornerRadius: 25)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.label.text = "ЗАВЕРШИТЬ"
+        view.label.font = UIFont(name: "SFPro", size: 16)
+        return view
+    }()
+    
+    var delegate: OnboardingDelegate?
     
     
     override init(frame: CGRect) {
@@ -40,6 +53,11 @@ class OnboardingCellTwo: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError()
     }
+    
+    
+    @objc func Finish() {
+        delegate?.Finish()
+    }
 }
 
 
@@ -50,6 +68,9 @@ extension OnboardingCellTwo {
     func SetSubview() {
         self.addSubview(largeLabel)
         self.addSubview(explanationLabel)
+        self.addSubview(nextButton)
+        
+        nextButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(Finish)))
     }
     
     func ActivateLayouts() {
@@ -58,9 +79,14 @@ extension OnboardingCellTwo {
             largeLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 35),
             largeLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -35),
             
-            explanationLabel.topAnchor.constraint(equalTo: largeLabel.bottomAnchor, constant: 50),
+            explanationLabel.topAnchor.constraint(equalTo: largeLabel.bottomAnchor, constant: 45),
             explanationLabel.leftAnchor.constraint(equalTo: largeLabel.leftAnchor),
-            explanationLabel.rightAnchor.constraint(equalTo: largeLabel.rightAnchor)
+            explanationLabel.rightAnchor.constraint(equalTo: largeLabel.rightAnchor),
+            
+            nextButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -70),
+            nextButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            nextButton.widthAnchor.constraint(equalToConstant: nextButton.frame.width),
+            nextButton.heightAnchor.constraint(equalToConstant: nextButton.frame.height)
         ])
     }
 }

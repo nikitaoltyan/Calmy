@@ -34,9 +34,29 @@ class OnboardingController: UIViewController {
         ActivateLayouts()
     }
 
-
 }
 
+
+
+
+
+extension OnboardingController: OnboardingDelegate{
+    func NextSlide() {
+        print("Next slide")
+        Vibration.Soft()
+        collection.isPagingEnabled = false
+        let indexPath = IndexPath(item: 1, section: 0)
+        collection.scrollToItem(at: indexPath, at: .right, animated: true)
+        collection.isPagingEnabled = true
+    }
+    
+    func Finish() {
+        Defaults.SetHasLaunched(statusToSet: true)
+        let newVC = ViewController()
+        newVC.modalPresentationStyle = .fullScreen
+        present(newVC, animated: true, completion: nil)
+    }
+}
 
 
 
@@ -55,10 +75,11 @@ extension OnboardingController: UICollectionViewDelegate, UICollectionViewDataSo
         switch indexPath.row {
         case 0:
             let cell = collection.dequeueReusableCell(withReuseIdentifier: "OnboardingCellOne", for: indexPath) as! OnboardingCellOne
+            cell.delegate = self
             return cell
         default:
             let cell = collection.dequeueReusableCell(withReuseIdentifier: "OnboardingCellTwo", for: indexPath) as! OnboardingCellTwo
-            cell.largeLabel.text = "Welcome to the Mood-tracker app"
+            cell.delegate = self
             return cell
         }
     }
@@ -82,4 +103,13 @@ extension OnboardingController{
             collection.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
+}
+
+
+
+
+
+protocol OnboardingDelegate {
+    func NextSlide()
+    func Finish()
 }
