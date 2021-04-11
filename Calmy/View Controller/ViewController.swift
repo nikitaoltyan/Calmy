@@ -75,6 +75,9 @@ class ViewController: UIViewController {
     @objc func FetchData(){
         model = DataFunction.FetchData()
         colorTable.reloadData()
+        let indexPath = IndexPath(row: (self.model?.count ?? 1) - 1, section: 0)
+        self.colorTable.scrollToRow(at: indexPath, at: .bottom, animated: false)
+        print("Scroll complited")
     }
     
     

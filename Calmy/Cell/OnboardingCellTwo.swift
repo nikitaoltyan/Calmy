@@ -16,7 +16,7 @@ class OnboardingCellTwo: UICollectionViewCell {
             .with(numberOfLines: 2)
             .with(fontName: "Helvetica-Bold", size: 35)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Здесь нет ничего сложного"
+        label.text = NSLocalizedString("onboarding_large_label", comment: "")
         return label
     }()
     
@@ -27,7 +27,7 @@ class OnboardingCellTwo: UICollectionViewCell {
             .with(numberOfLines: 0)
             .with(fontName: "Helvetica", size: 19)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Просто выбирай цвет своего настроения, который ты чувствуешь сейчас. Можешь ориентироваться на описание, а можешь довериться своей интуиции. Дерзай!"
+        label.text = NSLocalizedString("onboarding_explanation", comment: "")
         return label
     }()
     
@@ -35,7 +35,7 @@ class OnboardingCellTwo: UICollectionViewCell {
         let view = ButtonView(frame: CGRect(x: 0, y: 0, width: MainConstants.screenWidth-70, height: 53))
             .with(cornerRadius: 25)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.label.text = "ЗАВЕРШИТЬ"
+        view.label.text = NSLocalizedString("end", comment: "")
         view.label.font = UIFont(name: "SFPro", size: 16)
         return view
     }()

@@ -1,0 +1,33 @@
+//
+//  Localization.strings
+//  English
+//  Calmy
+//
+//  Created by Nikita Oltyan on 11.04.2021.
+//
+"black" = "Strength, confidence, a sense of intrigue from life. Aggravating depressive state, sadness and detachment from the outside world.";
+"blue" = "Reflections on the meaning of life and the eternal. Purposefulness, selflessness. Rigor and a serious attitude to life. A favorable state of the nervous system, a calm state.";
+"light_blue" = "Comfort, security and reliability. Disconnecting from all problems. Concentration and the desire to quietly and calmly do the job, achieving results.";
+"green" = "Rebirth or peace of mind. Healing and relaxation, distraction and boredom. \n\nBalance, efficiency and harmony. Lack of depressive thoughts.";
+"yellow" = "Increased mood and imagination work. Positive and talented displays of abilities. Purposefulness and willingness to adapt to the interlocutor.";
+"red" = "Active, purposeful, tough, and possibly aggressive. Passion, love, and self-sacrifice. Strong character, courage and determination.";
+"purple" = "Affection and warm feelings. Philosophical reflections, mental balance and feelings of flight. \n\nRomantic, sentimental, dreamy. The manifestation of mental abilities.";
+"gray" = "A neutral attitude to what is happening. Working days and everyday life. Friendliness, calmness, stability, realism and common sense.";
+"white" = "Purity, innocence and a bright attitude to life. The desire or start of new beginnings, a sense of freedom, inspiration. Kindness, honesty, and excellence.";
+
+"black_name" = "Black";
+"blue_name" = "Blue";
+"light_blue_name" = "Azure";
+"green_name" = "Green";
+"yellow_name" = "Yellow";
+"red_name" = "Red";
+"purple_name" = "Purple";
+"gray_name" = "Gray";
+"white_name" = "White";
+
+"greeting" = "Welcome to Calmy – a simple mood tracker";
+"onboarding_large_label" = "There is nothing complicated here";
+"onboarding_explanation" = "Just choose the color of your mood that you feel right now. You can focus on the description, or you can trust your intuition. It's all you!";
+"next_slide" = "NEXT";
+"end" = "FINISH";
+
