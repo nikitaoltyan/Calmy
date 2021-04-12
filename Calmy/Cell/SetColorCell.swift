@@ -52,7 +52,7 @@ class SetColorCell: UICollectionViewCell {
             .with(alignment: .center)
             .with(fontName: "Helvetica-Bold", size: 24)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Выбрать"
+        label.text = NSLocalizedString("choose", comment: "")
         return label
     }()
     

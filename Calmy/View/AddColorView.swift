@@ -33,6 +33,15 @@ class AddColorView: UIView {
         return view
     }()
     
+    let infoImage: UIImageView = {
+        let view = UIImageView(frame: CGRect(x: 0, y: 0, width: 28, height: 28))
+        view.image = UIImage(systemName: "questionmark.circle")
+        view.tintColor = Colors.shadow
+        view.isUserInteractionEnabled = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     
     var delegate: AddColorViewProtocol?
     let colors: Array<String> = ColorsData.colorsAssetsNames
@@ -48,6 +57,12 @@ class AddColorView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError()
+    }
+    
+    
+    @objc func Info(){
+        print("Info")
+        delegate?.ShowAlert()
     }
 
 }
@@ -102,7 +117,10 @@ extension AddColorView {
     
     func SetSubviews(){
         self.addSubview(collection)
+        self.addSubview(infoImage)
         self.addSubview(closeView)
+        
+        infoImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(Info)))
     }
     
     func ActivateLayouts(){
@@ -111,6 +129,11 @@ extension AddColorView {
             collection.leftAnchor.constraint(equalTo: self.leftAnchor),
             collection.rightAnchor.constraint(equalTo: self.rightAnchor),
             collection.heightAnchor.constraint(equalToConstant: self.frame.height - 40),
+            
+            infoImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
+            infoImage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10),
+            infoImage.heightAnchor.constraint(equalToConstant: infoImage.frame.height),
+            infoImage.widthAnchor.constraint(equalToConstant: infoImage.frame.width),
             
             closeView.topAnchor.constraint(equalTo: self.topAnchor, constant: 7),
             closeView.centerXAnchor.constraint(equalTo: self.centerXAnchor),

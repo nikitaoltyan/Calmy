@@ -30,7 +30,7 @@ class OnboardingCellOne: UICollectionViewCell {
         let view = ButtonView(frame: CGRect(x: 0, y: 0, width: MainConstants.screenWidth-70, height: 53))
             .with(cornerRadius: 25)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.label.text = NSLocalizedString("next", comment: "")
+        view.label.text = NSLocalizedString("next_slide", comment: "")
         view.label.font = UIFont(name: "SFPro", size: 16)
         return view
     }()

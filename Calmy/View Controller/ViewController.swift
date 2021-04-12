@@ -75,9 +75,9 @@ class ViewController: UIViewController {
     @objc func FetchData(){
         model = DataFunction.FetchData()
         colorTable.reloadData()
-        let indexPath = IndexPath(row: (self.model?.count ?? 1) - 1, section: 0)
+        let row = (self.model?.count ?? 1) - 1
+        let indexPath = IndexPath(row: row, section: 0)
         self.colorTable.scrollToRow(at: indexPath, at: .bottom, animated: false)
-        print("Scroll complited")
     }
     
     
@@ -86,7 +86,7 @@ class ViewController: UIViewController {
         addColorView.center.y = MainConstants.screenHeight + addColorView.frame.height/2
         addColorView.isHidden = false
         dimView.isHidden = false
-        UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.35, delay: 0, options: .curveEaseOut, animations: {
             self.dimView.backgroundColor = self.dimView.backgroundColor?.withAlphaComponent(0.45)
             self.addColorView.center.y -= self.addColorView.frame.height
         }, completion: { finished in
@@ -148,6 +148,18 @@ extension ViewController: AddColorViewProtocol {
             DataFunction.Add(proportion: proportion, color: color, date: date)
             self.FetchData()
         }
+    }
+    
+    func ShowAlert() {
+        let alert = UIAlertController(title: NSLocalizedString("info", comment: ""), message: "", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Instagram", style: .default , handler:{ (UIAlertAction)in
+                print("User click Approve button")
+        }))
+            
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler:{ (UIAlertAction)in
+            print("User click Dismiss button")
+        }))
+        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -216,4 +228,5 @@ protocol SetColorCellProtocol {
 protocol AddColorViewProtocol {
     func CloseView()
     func AddData(proportion: Double, color: String, forDate date: Date?)
+    func ShowAlert()
 }

@@ -29,5 +29,7 @@
 "onboarding_large_label" = "There is nothing complicated here";
 "onboarding_explanation" = "Just choose the color of your mood that you feel right now. You can focus on the description, or you can trust your intuition. It's all you!";
 "next_slide" = "NEXT";
+"choose" = "Choose";
 "end" = "FINISH";
+"info" = "Info";
 
