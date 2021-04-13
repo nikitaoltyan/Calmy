@@ -22,7 +22,13 @@ class DataFunction {
         let request: NSFetchRequest<Model> = Model.fetchRequest()
         request.returnsObjectsAsFaults = false
         do {
-            return try managedContext.fetch(request)
+            let data = try managedContext.fetch(request)
+            // Slice and show only last 8 days
+            if data.count > 8 {
+                let slice: [Model] = Array(data[(data.count-8)...(data.count-1)])
+                return slice
+            }
+            return data
         } catch {
             print(error)
         }

@@ -105,6 +105,18 @@ class ViewController: UIViewController {
             self.addColorView.isHidden = true
         })
     }
+    
+    func OpenInst(){
+        let instagramHooks = "instagram://user?username=calmy_en"
+        let instagramUrl = NSURL(string: instagramHooks)
+        if UIApplication.shared.canOpenURL(instagramUrl! as URL) {
+            print("Open Calmy Inst page")
+            UIApplication.shared.open(instagramUrl! as URL, options: [:], completionHandler: nil)
+        } else {
+            print("Open Ordinary Inst page")
+            UIApplication.shared.open(NSURL(string: "http://instagram.com/")! as URL, options: [:], completionHandler: nil)
+        }
+    }
 }
 
 
@@ -151,12 +163,13 @@ extension ViewController: AddColorViewProtocol {
     }
     
     func ShowAlert() {
-        let alert = UIAlertController(title: NSLocalizedString("info", comment: ""), message: "", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Instagram", style: .default , handler:{ (UIAlertAction)in
-                print("User click Approve button")
+        let alert = UIAlertController(title: NSLocalizedString("info", comment: ""),
+                                      message: NSLocalizedString("info_desc", comment: ""), preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Instagram", style: .default , handler:{ (UIAlertAction) in
+            self.OpenInst()
         }))
             
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler:{ (UIAlertAction)in
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler:{ (UIAlertAction) in
             print("User click Dismiss button")
         }))
         present(alert, animated: true, completion: nil)
