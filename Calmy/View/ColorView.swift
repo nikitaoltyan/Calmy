@@ -14,7 +14,6 @@ class ColorView: UIView {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        print("Override view draw")
         var prop = proportions
         if let sum = prop?.reduce(0, +) {
             if sum < 1 {

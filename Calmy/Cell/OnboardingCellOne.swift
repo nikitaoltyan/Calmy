@@ -10,7 +10,8 @@ import UIKit
 class OnboardingCellOne: UICollectionViewCell {
     
     let logoView: LogoView = {
-        let view = LogoView(frame: CGRect(x: 0, y: 0, width: MainConstants.screenWidth-90, height: 300))
+        let width = MainConstants.screenWidth-100
+        let view = LogoView(frame: CGRect(x: 0, y: 0, width: width, height: width*0.88))
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -50,8 +51,8 @@ class OnboardingCellOne: UICollectionViewCell {
     
     
     @objc func NextSlide() {
-        print("Next slide")
-        delegate?.NextSlide()
+        Vibration.Soft()
+        delegate?.NextSlide(slide: 1)
     }
 }
 
@@ -70,7 +71,7 @@ extension OnboardingCellOne {
     
     func ActivateLayouts() {
         NSLayoutConstraint.activate([
-            logoView.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 15),
+            logoView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             logoView.topAnchor.constraint(equalTo: self.topAnchor, constant: 120),
             logoView.heightAnchor.constraint(equalToConstant: logoView.frame.height),
             logoView.widthAnchor.constraint(equalToConstant: logoView.frame.width),

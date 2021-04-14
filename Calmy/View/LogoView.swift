@@ -68,7 +68,7 @@ extension LogoView {
     func ActivateLayouts() {
         NSLayoutConstraint.activate([
             firstSquare.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            firstSquare.leftAnchor.constraint(equalTo: self.leftAnchor),
+            firstSquare.leftAnchor.constraint(equalTo: self.leftAnchor, constant: firstSquare.frame.width*0.18),
             firstSquare.widthAnchor.constraint(equalToConstant: firstSquare.frame.width),
             firstSquare.heightAnchor.constraint(equalToConstant: firstSquare.frame.height),
             
@@ -83,7 +83,7 @@ extension LogoView {
             thirdSquare.heightAnchor.constraint(equalToConstant: thirdSquare.frame.height),
             
             turnedSquare.centerYAnchor.constraint(equalTo: firstSquare.centerYAnchor),
-            turnedSquare.leftAnchor.constraint(equalTo: firstSquare.rightAnchor, constant: 90),
+            turnedSquare.leftAnchor.constraint(equalTo: firstSquare.rightAnchor, constant: firstSquare.frame.width*0.9),
             turnedSquare.widthAnchor.constraint(equalToConstant: turnedSquare.frame.width),
             turnedSquare.heightAnchor.constraint(equalToConstant: turnedSquare.frame.height)
         ])

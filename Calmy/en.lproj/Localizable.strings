@@ -25,12 +25,23 @@
 "gray_name" = "Gray";
 "white_name" = "White";
 
+// Onboarding
 "greeting" = "Welcome to Calmy – a simple mood tracker";
 "onboarding_large_label" = "There is nothing complicated here";
 "onboarding_explanation" = "Just choose the color of your mood that you feel right now. You can focus on the description, or you can trust your intuition. It's all you!";
+"block_one_label" = "Tap on this button to choose a color";
+"block_two_label" = "This how one day moods look like";
+"block_two_explanation_one" = "12 a.m.";
+"block_two_explanation_two" = "12 p.m.";
+"block_three_label" = "In the middle of the day it was like this";
+"block_three_explanation" = "Midday. The last mood is yellow";
+"block_four_label" = "And then it turns into this";
+"block_four_explanation" = "Day. The mood turned red! It's fire!";
 "next_slide" = "NEXT";
-"choose" = "Choose";
 "end" = "FINISH";
+
+// Other elements
+"choose" = "Choose";
 "info" = "Info";
 "info_desc" = "You can follow our Instagram and and ask any question you want.";
 

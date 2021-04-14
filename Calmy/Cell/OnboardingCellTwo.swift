@@ -31,11 +31,19 @@ class OnboardingCellTwo: UICollectionViewCell {
         return label
     }()
     
+    let block: BlockOne = {
+        let view = BlockOne(frame: CGRect(x: 0, y: 0, width: MainConstants.screenWidth, height: 165))
+            .with(bgColor: .clear)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.isHidden = true
+        return view
+    }()
+    
     let nextButton: ButtonView = {
         let view = ButtonView(frame: CGRect(x: 0, y: 0, width: MainConstants.screenWidth-70, height: 53))
             .with(cornerRadius: 25)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.label.text = NSLocalizedString("end", comment: "")
+        view.label.text = NSLocalizedString("next_slide", comment: "")
         view.label.font = UIFont(name: "SFPro", size: 16)
         return view
     }()
@@ -55,8 +63,13 @@ class OnboardingCellTwo: UICollectionViewCell {
     }
     
     
-    @objc func Finish() {
-        delegate?.Finish()
+    @objc func NextSlide() {
+        Vibration.Soft()
+        if (block.isHidden) {
+            block.isHidden = false
+        } else {
+            delegate?.NextSlide(slide: 2)
+        }
     }
 }
 
@@ -68,9 +81,10 @@ extension OnboardingCellTwo {
     func SetSubview() {
         self.addSubview(largeLabel)
         self.addSubview(explanationLabel)
+        self.addSubview(block)
         self.addSubview(nextButton)
         
-        nextButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(Finish)))
+        nextButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(NextSlide)))
     }
     
     func ActivateLayouts() {
@@ -79,9 +93,14 @@ extension OnboardingCellTwo {
             largeLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 35),
             largeLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -35),
             
-            explanationLabel.topAnchor.constraint(equalTo: largeLabel.bottomAnchor, constant: 45),
+            explanationLabel.topAnchor.constraint(equalTo: largeLabel.bottomAnchor, constant: 25),
             explanationLabel.leftAnchor.constraint(equalTo: largeLabel.leftAnchor),
             explanationLabel.rightAnchor.constraint(equalTo: largeLabel.rightAnchor),
+            
+            block.topAnchor.constraint(equalTo: explanationLabel.bottomAnchor, constant: 75),
+            block.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            block.heightAnchor.constraint(equalToConstant: block.frame.height),
+            block.widthAnchor.constraint(equalToConstant: block.frame.width),
             
             nextButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -70),
             nextButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
