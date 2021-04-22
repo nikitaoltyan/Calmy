@@ -2,7 +2,7 @@
 //  MainConstants.swift
 //  Moody
 //
-//  Created by Никита Олтян on 27.02.2021.
+//  Created by Nikita Oltyan on 27.02.2021.
 //
 
 import Foundation
