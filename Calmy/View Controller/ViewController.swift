@@ -12,16 +12,24 @@ import CoreData
 class ViewController: UIViewController {
     
     let mainView: UIView = {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
+        let size: CGFloat = {
+            if MainConstants.screenHeight == 736 {return 100}
+            else if MainConstants.screenHeight > 700 {return 150}
+            else {return 90}}()
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: size, height: size))
         view.backgroundColor = Colors.pink
-        view.addSoftUIEffectForView(cornerRadius: 150/2, themeColor: Colors.pink)
-        view.layer.cornerRadius = 150/2
+        view.addSoftUIEffectForView(cornerRadius: size/2, themeColor: Colors.pink)
+        view.layer.cornerRadius = size/2
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     let buttonImage: UIImageView = {
-        let image = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        let size: CGFloat = {
+            if MainConstants.screenHeight == 736 {return 65}
+            else if MainConstants.screenHeight > 700 {return 100}
+            else {return 60}}()
+        let image = UIImageView(frame: CGRect(x: 0, y: 0, width: size, height: size))
         image.image = UIImage(named: "Ohm")
         image.tintColor = Colors.shadow
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -41,7 +49,11 @@ class ViewController: UIViewController {
     }()
     
     lazy var addColorView: AddColorView = {
-        let view = AddColorView(frame: CGRect(x: 0, y: 0, width: MainConstants.screenWidth, height: 650))
+        let height: CGFloat = {
+            if MainConstants.screenHeight == 736 {return 600}
+            else if MainConstants.screenHeight > 700 {return 650}
+            else {return 540}}()
+        let view = AddColorView(frame: CGRect(x: 0, y: 0, width: MainConstants.screenWidth, height: height))
             .with(cornerRadius: 15)
             .with(bgColor: Colors.pink)
         view.delegate = self
@@ -75,9 +87,15 @@ class ViewController: UIViewController {
     @objc func FetchData(){
         model = DataFunction.FetchData()
         colorTable.reloadData()
-        let row = (self.model?.count ?? 1) - 1
-        let indexPath = IndexPath(row: row, section: 0)
-        self.colorTable.scrollToRow(at: indexPath, at: .bottom, animated: false)
+//        var row: Int?
+//        if self.model?.count == 0 {
+//            row = 0
+//        } else {
+//            row = (self.model?.count ?? 1) - 1
+//        }
+//        print(row)
+//        let indexPath = IndexPath(row: row!, section: 0)
+//        self.colorTable.scrollToRow(at: indexPath, at: .bottom, animated: false)
     }
     
     
@@ -130,7 +148,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 55
+        if MainConstants.screenHeight > 700 {
+            return 55
+        } else {
+            return 38
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -168,6 +190,10 @@ extension ViewController: AddColorViewProtocol {
         alert.addAction(UIAlertAction(title: "Instagram", style: .default , handler:{ (UIAlertAction) in
             self.OpenInst()
         }))
+        
+        alert.addAction(UIAlertAction(title: "Privacy Policy", style: .default , handler:{ (UIAlertAction) in
+            if let url = URL(string: "http://calmy.tilda.ws/privacy_policy") { UIApplication.shared.open(url) }
+        }))
             
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler:{ (UIAlertAction) in
             print("User click Dismiss button")
@@ -200,13 +226,18 @@ extension ViewController {
     }
     
     func ActivateLayouts(){
+        let colorTableHeight: CGFloat = {if MainConstants.screenHeight > 700 {return 500} else {return 320}}()
+        let buttonBottom: CGFloat = {
+            if MainConstants.screenHeight == 736 {return -70}
+            else if MainConstants.screenHeight > 700 {return -100}
+            else {return -50}}()
         NSLayoutConstraint.activate([
             colorTable.topAnchor.constraint(equalTo: view.topAnchor),
             colorTable.leftAnchor.constraint(equalTo: view.leftAnchor),
             colorTable.rightAnchor.constraint(equalTo: view.rightAnchor),
-            colorTable.heightAnchor.constraint(equalToConstant: 500),
+            colorTable.heightAnchor.constraint(equalToConstant: colorTableHeight),
             
-            mainView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
+            mainView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: buttonBottom),
             mainView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             mainView.heightAnchor.constraint(equalToConstant: mainView.frame.height),
             mainView.widthAnchor.constraint(equalToConstant: mainView.frame.width),

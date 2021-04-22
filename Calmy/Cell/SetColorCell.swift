@@ -96,6 +96,7 @@ extension SetColorCell {
     }
     
     func ActivateLayouts(){
+        let buttonBottom: CGFloat = {if MainConstants.screenHeight > 700 {return -30} else {return -20}}()
         NSLayoutConstraint.activate([
             colorView.topAnchor.constraint(equalTo: self.topAnchor, constant: 15),
             colorView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
@@ -109,7 +110,7 @@ extension SetColorCell {
             desc.leftAnchor.constraint(equalTo: colorLabel.leftAnchor, constant: -3),
             desc.rightAnchor.constraint(equalTo: colorView.rightAnchor, constant: 4),
             
-            buttonView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30),
+            buttonView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: buttonBottom),
             buttonView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             buttonView.heightAnchor.constraint(equalToConstant: buttonView.frame.height),
             buttonView.widthAnchor.constraint(equalToConstant: buttonView.frame.width),

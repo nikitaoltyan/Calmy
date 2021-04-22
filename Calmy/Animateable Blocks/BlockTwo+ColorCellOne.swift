@@ -10,25 +10,28 @@ import UIKit
 class BlockTwo: UIView {
 
     let label: UILabel = {
+        let size: CGFloat = {if MainConstants.screenHeight > 700 {return 24} else {return 22}}()
         let label = UILabel()
             .with(color: Colors.nearBlack)
             .with(alignment: .left)
             .with(numberOfLines: 0)
-            .with(fontName: "Helvetica-Bold", size: 24)
+            .with(fontName: "Helvetica-Bold", size: size)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = NSLocalizedString("block_two_label", comment: "")
         return label
     }()
     
     let colorView: ColorView = {
-        let view = ColorView(frame: CGRect(x: 0, y: 0, width: MainConstants.screenWidth-70, height: 50))
+        let height: CGFloat = {if MainConstants.screenHeight > 740 {return 50} else {return 38}}()
+        let view = ColorView(frame: CGRect(x: 0, y: 0, width: MainConstants.screenWidth-70, height: height))
             .with(bgColor: Colors.pink)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     let stickViewOne: UIView = {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 6, height: 45))
+        let height: CGFloat = {if MainConstants.screenHeight > 700 {return 45} else {return 35}}()
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 6, height: height))
             .with(bgColor: UIColor.gray.withAlphaComponent(0.5))
             .with(cornerRadius: 3)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -36,7 +39,8 @@ class BlockTwo: UIView {
     }()
     
     let stickViewTwo: UIView = {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 6, height: 45))
+        let height: CGFloat = {if MainConstants.screenHeight > 700 {return 45} else {return 35}}()
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 6, height: height))
             .with(bgColor: UIColor.gray.withAlphaComponent(0.5))
             .with(cornerRadius: 3)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -101,13 +105,14 @@ extension BlockTwo {
     }
     
     func ActivateLayouts() {
+        let colorViewTop: CGFloat = {if MainConstants.screenHeight > 700 {return 20} else {return 13}}()
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
             label.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 35),
             label.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -35),
             
             colorView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            colorView.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 20),
+            colorView.topAnchor.constraint(equalTo: label.bottomAnchor, constant: colorViewTop),
             colorView.heightAnchor.constraint(equalToConstant: colorView.frame.height),
             colorView.widthAnchor.constraint(equalToConstant: colorView.frame.width),
             

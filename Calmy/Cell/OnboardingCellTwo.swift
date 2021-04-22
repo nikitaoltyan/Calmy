@@ -10,11 +10,12 @@ import UIKit
 class OnboardingCellTwo: UICollectionViewCell {
     
     let largeLabel: UILabel = {
+        let size: CGFloat = {if MainConstants.screenHeight > 700 {return 35} else {return 30}}()
         let label = UILabel()
             .with(color: Colors.nearBlack)
             .with(alignment: .left)
             .with(numberOfLines: 2)
-            .with(fontName: "Helvetica-Bold", size: 35)
+            .with(fontName: "Helvetica-Bold", size: size)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = NSLocalizedString("onboarding_large_label", comment: "")
         return label
@@ -88,8 +89,11 @@ extension OnboardingCellTwo {
     }
     
     func ActivateLayouts() {
+        let largeLabelTop: CGFloat = {if MainConstants.screenHeight>740 {return 120} else {return 60}}()
+        let blockTop: CGFloat = {if MainConstants.screenHeight>700 {return 75} else {return 30}}()
+        let buttonBottom: CGFloat = {if MainConstants.screenHeight>700 {return -70} else {return -35}}()
         NSLayoutConstraint.activate([
-            largeLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 120),
+            largeLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: largeLabelTop),
             largeLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 35),
             largeLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -35),
             
@@ -97,12 +101,12 @@ extension OnboardingCellTwo {
             explanationLabel.leftAnchor.constraint(equalTo: largeLabel.leftAnchor),
             explanationLabel.rightAnchor.constraint(equalTo: largeLabel.rightAnchor),
             
-            block.topAnchor.constraint(equalTo: explanationLabel.bottomAnchor, constant: 75),
+            block.topAnchor.constraint(equalTo: explanationLabel.bottomAnchor, constant: blockTop),
             block.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             block.heightAnchor.constraint(equalToConstant: block.frame.height),
             block.widthAnchor.constraint(equalToConstant: block.frame.width),
             
-            nextButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -70),
+            nextButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: buttonBottom),
             nextButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             nextButton.widthAnchor.constraint(equalToConstant: nextButton.frame.width),
             nextButton.heightAnchor.constraint(equalToConstant: nextButton.frame.height)

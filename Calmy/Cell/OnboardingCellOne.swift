@@ -10,18 +10,20 @@ import UIKit
 class OnboardingCellOne: UICollectionViewCell {
     
     let logoView: LogoView = {
-        let width = MainConstants.screenWidth-100
+        let width: CGFloat = {if MainConstants.screenHeight > 700 {return MainConstants.screenWidth-100}
+            else {return MainConstants.screenWidth-170}}()
         let view = LogoView(frame: CGRect(x: 0, y: 0, width: width, height: width*0.88))
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     let largeLabel: UILabel = {
+        let size: CGFloat = {if MainConstants.screenHeight > 700 {return 35} else {return 30}}()
         let label = UILabel()
             .with(color: Colors.nearBlack)
             .with(alignment: .left)
             .with(numberOfLines: 0)
-            .with(fontName: "Helvetica-Bold", size: 35)
+            .with(fontName: "Helvetica-Bold", size: size)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = NSLocalizedString("greeting", comment: "")
         return label
@@ -70,6 +72,7 @@ extension OnboardingCellOne {
     }
     
     func ActivateLayouts() {
+        let buttonBottom: CGFloat = {if MainConstants.screenHeight>700 {return -70} else {return -35}}()
         NSLayoutConstraint.activate([
             logoView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             logoView.topAnchor.constraint(equalTo: self.topAnchor, constant: 120),
@@ -80,7 +83,7 @@ extension OnboardingCellOne {
             largeLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 35),
             largeLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -35),
             
-            nextButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -70),
+            nextButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: buttonBottom),
             nextButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             nextButton.widthAnchor.constraint(equalToConstant: nextButton.frame.width),
             nextButton.heightAnchor.constraint(equalToConstant: nextButton.frame.height)
