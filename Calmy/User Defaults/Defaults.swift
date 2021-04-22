@@ -13,7 +13,17 @@ class Defaults {
     
     
     /// Set "has launched" indicator.
-    static func SetHasLaunched(statusToSet: Bool) {
+    static func setHasLaunched(statusToSet: Bool) {
         userDefaults.setValue(statusToSet, forKey: "hasLaunched")
+    }
+    
+    /// Set " default Color Table" indicator for AddColorView.
+    static func setDefaultColorTable(statusToSet: Int) {
+        userDefaults.setValue(statusToSet, forKey: "defaultColorTable")
+    }
+    
+    /// Get " defaultColorTable" indicator for activiting right table in AddColorView.
+    static func getDefaultColorTable() -> Int {
+        return userDefaults.integer(forKey: "defaultColorTable")
     }
 }

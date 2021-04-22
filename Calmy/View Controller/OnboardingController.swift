@@ -55,7 +55,7 @@ extension OnboardingController: OnboardingDelegate{
     
     func Finish() {
         Vibration.Medium()
-        Defaults.SetHasLaunched(statusToSet: true)
+        Defaults.setHasLaunched(statusToSet: true)
         let newVC = ViewController()
         newVC.modalPresentationStyle = .fullScreen
         present(newVC, animated: true, completion: nil)

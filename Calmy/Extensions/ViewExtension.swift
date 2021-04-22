@@ -36,6 +36,12 @@ extension UIView {
     }
     
     
+    func with(autolayout: Bool) -> Self {
+        translatesAutoresizingMaskIntoConstraints = autolayout
+        return self
+    }
+    
+    
     /// Add a Neomorphism effect to UIView.
     public func addSoftUIEffectForView(cornerRadius: CGFloat = 15.0, themeColor: UIColor = UIColor(red: 241/255, green: 243/255, blue: 246/255, alpha: 1.0)) {
         self.layer.cornerRadius = cornerRadius
