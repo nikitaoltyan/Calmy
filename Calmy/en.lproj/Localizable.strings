@@ -12,6 +12,7 @@
 "yellow" = "Increased mood and imagination work. Positive and talented displays of abilities. Purposefulness and willingness to adapt to the interlocutor.";
 "red" = "Active, purposeful, tough, and possibly aggressive. Passion, love, and self-sacrifice. Strong character, courage and determination.";
 "purple" = "Affection and warm feelings. Philosophical reflections, mental balance and feelings of flight. \n\nRomantic, sentimental, dreamy. The manifestation of mental abilities.";
+"dark_green" = "Passivity, immobility, and emptiness. A measured lifestyle with a deep and heavy immersion in yourself. \n\nTrack your own emotions and body sensations. Brooding.";
 "gray" = "A neutral attitude to what is happening. Working days and everyday life. Friendliness, calmness, stability, realism and common sense.";
 "white" = "Purity, innocence and a bright attitude to life. The desire or start of new beginnings, a sense of freedom, inspiration. Kindness, honesty, and excellence.";
 
@@ -22,6 +23,7 @@
 "yellow_name" = "Yellow";
 "red_name" = "Red";
 "purple_name" = "Purple";
+"dark_green_name" = "Dark Green";
 "gray_name" = "Gray";
 "white_name" = "White";
 

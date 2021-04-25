@@ -49,7 +49,12 @@ extension QuickAddView: UICollectionViewDelegate, UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collection.frame.width/2-10, height: 95)
+        let condition: Bool = MainConstants.screenHeight > 700
+        if (condition) {
+            return CGSize(width: collection.frame.width/2-10, height: 95)
+        } else {
+            return CGSize(width: collection.frame.width/2-10, height: 80)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

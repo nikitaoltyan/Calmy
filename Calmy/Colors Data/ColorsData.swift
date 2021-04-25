@@ -17,6 +17,7 @@ class ColorsData {
                                         "yellowOchre",
                                         "redwood",
                                         "violet",
+                                        "darkGreen",
                                         "gray",
                                         "white"]
     
@@ -27,6 +28,7 @@ class ColorsData {
                                              NSLocalizedString("yellow_name", comment: ""),
                                              NSLocalizedString("red_name", comment: ""),
                                              NSLocalizedString("purple_name", comment: ""),
+                                             NSLocalizedString("dark_green_name", comment: ""),
                                              NSLocalizedString("gray_name", comment: ""),
                                              NSLocalizedString("white_name", comment: "")]
     
@@ -37,6 +39,7 @@ class ColorsData {
                                              NSLocalizedString("yellow", comment: ""),
                                              NSLocalizedString("red", comment: ""),
                                              NSLocalizedString("purple", comment: ""),
+                                             NSLocalizedString("dark_green", comment: ""),
                                              NSLocalizedString("gray", comment: ""),
                                              NSLocalizedString("white", comment: "")
     ]

@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         let size: CGFloat = {
             if MainConstants.screenHeight == 736 {return 100}
             else if MainConstants.screenHeight > 700 {return 150}
-            else {return 90}}()
+            else {return 100}}()
         let view = UIView(frame: CGRect(x: 0, y: 0, width: size, height: size))
         view.backgroundColor = Colors.pink
         view.addSoftUIEffectForView(cornerRadius: size/2, themeColor: Colors.pink)
