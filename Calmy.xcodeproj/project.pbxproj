@@ -38,9 +38,6 @@
 		5CBBCDF625F12F90001D5628 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBBCDF525F12F90001D5628 /* ViewExtension.swift */; };
 		5CBBCDFE25F130B5001D5628 /* LabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBBCDFD25F130B5001D5628 /* LabelExtension.swift */; };
 		5CBBCE0325F1319D001D5628 /* TextView Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBBCE0225F1319D001D5628 /* TextView Extension.swift */; };
-		5CBBCE0925F13280001D5628 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CBBCE0825F13280001D5628 /* SF-Pro.ttf */; };
-		5CBBCE0E25F13299001D5628 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5CBBCE0D25F13299001D5628 /* SF-Pro-Text-Medium.otf */; };
-		5CBBCE1325F132BB001D5628 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5CBBCE1225F132BB001D5628 /* SF-Pro-Text-Bold.otf */; };
 		5CC4B10925F3524C00FA3078 /* Date Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4B10825F3524C00FA3078 /* Date Extension.swift */; };
 		5CE50FC526160405000811BD /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE50FC426160405000811BD /* OnboardingController.swift */; };
 		5CE50FCB26160458000811BD /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE50FCA26160458000811BD /* Defaults.swift */; };
@@ -114,9 +111,6 @@
 		5CBBCDF525F12F90001D5628 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		5CBBCDFD25F130B5001D5628 /* LabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtension.swift; sourceTree = "<group>"; };
 		5CBBCE0225F1319D001D5628 /* TextView Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextView Extension.swift"; sourceTree = "<group>"; };
-		5CBBCE0825F13280001D5628 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro.ttf"; path = "../../../../../../Library/Fonts/SF-Pro.ttf"; sourceTree = "<group>"; };
-		5CBBCE0D25F13299001D5628 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Medium.otf"; path = "../../../../../../Library/Fonts/SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
-		5CBBCE1225F132BB001D5628 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Text-Bold.otf"; path = "../../../../../../Library/Fonts/SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		5CC4B10825F3524C00FA3078 /* Date Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date Extension.swift"; sourceTree = "<group>"; };
 		5CE50FC426160405000811BD /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
 		5CE50FCA26160458000811BD /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
@@ -250,7 +244,6 @@
 				5C3130BA26315581000F6080 /* Main.storyboard */,
 				5C1FE5EB25E7ED3E00611190 /* LaunchScreen.storyboard */,
 				5C1FE5EE25E7ED3E00611190 /* Info.plist */,
-				5CBBCE0725F1322B001D5628 /* Fonts */,
 				5CAFAF282618F817003F5D88 /* Model.xcdatamodeld */,
 				5CA53DFE26230ED000300074 /* Localizable.strings */,
 			);
@@ -295,16 +288,6 @@
 				5CC4B10825F3524C00FA3078 /* Date Extension.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		5CBBCE0725F1322B001D5628 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				5CBBCE0D25F13299001D5628 /* SF-Pro-Text-Medium.otf */,
-				5CBBCE1225F132BB001D5628 /* SF-Pro-Text-Bold.otf */,
-				5CBBCE0825F13280001D5628 /* SF-Pro.ttf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		5CE50FC92616043E000811BD /* User Defaults */ = {
@@ -457,11 +440,8 @@
 			files = (
 				5C3130BB26315581000F6080 /* Main.storyboard in Resources */,
 				5C1FE5ED25E7ED3E00611190 /* LaunchScreen.storyboard in Resources */,
-				5CBBCE0925F13280001D5628 /* SF-Pro.ttf in Resources */,
 				5CA53DFC26230ED000300074 /* Localizable.strings in Resources */,
-				5CBBCE1325F132BB001D5628 /* SF-Pro-Text-Bold.otf in Resources */,
 				5C1FE5EA25E7ED3E00611190 /* Assets.xcassets in Resources */,
-				5CBBCE0E25F13299001D5628 /* SF-Pro-Text-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
