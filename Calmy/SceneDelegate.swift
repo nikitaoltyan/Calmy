@@ -10,7 +10,6 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-// Another test
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -20,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             let hasLaunched = UserDefaults.standard.bool(forKey: "hasLaunched")
             if (hasLaunched) {
-                window.rootViewController = ViewController()
-//                window.rootViewController = OnboardingController()
+//                window.rootViewController = ViewController()
+                window.rootViewController = StatsController()
             } else {
                 window.rootViewController = OnboardingController()
             }

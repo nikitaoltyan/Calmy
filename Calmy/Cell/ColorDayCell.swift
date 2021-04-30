@@ -11,22 +11,22 @@ class ColorDayCell: UITableViewCell {
 
     let colorView: ColorView = {
         let view = ColorView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = Colors.pink
+            .with(bgColor: Colors.pink)
+            .with(autolayout: false)
         return view
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        SetSubviews()
-        ActivateLayouts()
+        setSubviews()
+        activateLayouts()
     }
     
     required init?(coder: NSCoder) {
         fatalError()
     }
     
-    func UpdateColorView(proportions: [Double]?, colors: [String]?) {
+    func updateColorView(proportions: [Double]?, colors: [String]?) {
         colorView.proportions = proportions
         colorView.colors = colors
         colorView.setNeedsDisplay()
@@ -38,11 +38,11 @@ class ColorDayCell: UITableViewCell {
 
 extension ColorDayCell {
     
-    func SetSubviews(){
+    func setSubviews(){
         self.addSubview(colorView)
     }
     
-    func ActivateLayouts(){
+    func activateLayouts(){
         NSLayoutConstraint.activate([
             colorView.topAnchor.constraint(equalTo: self.topAnchor),
             colorView.bottomAnchor.constraint(equalTo: self.bottomAnchor),

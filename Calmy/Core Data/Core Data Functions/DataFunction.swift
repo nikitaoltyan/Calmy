@@ -36,6 +36,17 @@ class DataFunction {
     }
     
     
+    static func fetchAllData() -> [Model]{
+        let request: NSFetchRequest<Model> = Model.fetchRequest()
+        request.returnsObjectsAsFaults = false
+        do {
+            let data = try managedContext.fetch(request)
+            return data
+        } catch { print(error) }
+        return []
+    }
+    
+    
     /// Add give data in model.
     /// - warning: Only for "Model" Data Model.
     static func AddDataToModel(proportions: [Double], colors: [String], date: Date?){

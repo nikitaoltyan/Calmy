@@ -38,8 +38,9 @@ class ViewController: UIViewController {
     
     lazy var colorTable: UITableView = {
         let table = UITableView()
-        table.backgroundColor = Colors.pink
-        table.translatesAutoresizingMaskIntoConstraints = false
+            .with(bgColor: Colors.pink)
+            .with(autolayout: false)
+        
         table.delegate = self
         table.dataSource = self
         table.showsVerticalScrollIndicator = false
@@ -157,7 +158,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = colorTable.dequeueReusableCell(withIdentifier: "ColorDayCell", for: indexPath) as! ColorDayCell
-        cell.UpdateColorView(proportions: model?[indexPath.row].proportions,
+        cell.updateColorView(proportions: model?[indexPath.row].proportions,
                              colors: model?[indexPath.row].colors)
         return cell
     }
