@@ -65,9 +65,10 @@ class OnboardingCellTwo: UICollectionViewCell {
     
     
     @objc func NextSlide() {
-        Vibration.Soft()
+        Vibration.soft()
         if (block.isHidden) {
             block.isHidden = false
+            block.animate()
         } else {
             delegate?.NextSlide(slide: 2)
         }

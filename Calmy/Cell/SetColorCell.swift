@@ -10,7 +10,8 @@ import UIKit
 class SetColorCell: UICollectionViewCell {
     
     lazy var colorView: UIView = {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.width*4/5, height: self.frame.height/3))
+        let multiplier: CGFloat = {if MainConstants.screenHeight > 700 { return 3.5 } else { return 3 }}()
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.width*4/5, height: self.frame.height/multiplier))
             .with(cornerRadius: 23)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -75,9 +76,10 @@ class SetColorCell: UICollectionViewCell {
     
     
     @objc func AddColor() {
-        print("Add color")
         delegate?.CloseView()
-        delegate?.AddData(proportion: Double(TimeFunctions.GetTime()), color: color!, forDate: Date().onlyDate)
+        delegate?.AddData(proportion: Double(TimeFunctions.GetTime()),
+                          color: color!,
+                          forDate: Date().onlyDate)
     }
 }
 

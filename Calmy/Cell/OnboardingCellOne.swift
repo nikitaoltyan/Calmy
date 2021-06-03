@@ -53,7 +53,7 @@ class OnboardingCellOne: UICollectionViewCell {
     
     
     @objc func NextSlide() {
-        Vibration.Soft()
+        Vibration.soft()
         delegate?.NextSlide(slide: 1)
     }
 }

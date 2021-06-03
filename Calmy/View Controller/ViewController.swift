@@ -65,6 +65,15 @@ class ViewController: UIViewController {
         return view
     }()
     
+    let statsImage: UIImageView = {
+        let view = UIImageView(frame: CGRect(x: 0, y: 0, width: 34, height: 34))
+            .with(autolayout: false)
+        view.image = UIImage(systemName: "rectangle.3.offgrid.fill")
+        view.tintColor = Colors.shadow
+        view.isUserInteractionEnabled = true
+        return view
+    }()
+    
     let dimView: UIView = {
         let view = UIView()
             .with(bgColor: UIColor.black.withAlphaComponent(0))
@@ -76,32 +85,25 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        NotificationCenter.default.addObserver(self, selector: #selector(FetchData), name: UIApplication.willEnterForegroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(fetchData), name: UIApplication.willEnterForegroundNotification, object: nil)
         view.backgroundColor = Colors.pink
         SetSubviews()
         ActivateLayouts()
-        FetchData()
+        fetchData()
     }
     
     
     
-    @objc func FetchData(){
+    @objc func fetchData(){
         model = DataFunction.FetchData()
         colorTable.reloadData()
-//        var row: Int?
-//        if self.model?.count == 0 {
-//            row = 0
-//        } else {
-//            row = (self.model?.count ?? 1) - 1
-//        }
-//        print(row)
-//        let indexPath = IndexPath(row: row!, section: 0)
-//        self.colorTable.scrollToRow(at: indexPath, at: .bottom, animated: false)
+        statsImage.isHidden = !(DataFunction.checkIfCount(moreThen: 1))
     }
     
     
-    @objc func ShowAddColorView(){
-        Vibration.Light()
+    @objc
+    func ShowAddColorView(){
+        Vibration.light()
         addColorView.center.y = MainConstants.screenHeight + addColorView.frame.height/2
         addColorView.isHidden = false
         dimView.isHidden = false
@@ -114,9 +116,10 @@ class ViewController: UIViewController {
     }
     
     
-    @objc func HideAddColorView(){
-        Vibration.Light()
-        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+    @objc
+    func hideAddColorView(){
+        Vibration.light()
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
             self.addColorView.center.y += self.addColorView.frame.height
             self.dimView.backgroundColor = self.dimView.backgroundColor?.withAlphaComponent(0)
         }, completion: { finished in
@@ -125,7 +128,16 @@ class ViewController: UIViewController {
         })
     }
     
-    func OpenInst(){
+    
+    @objc
+    func openStats(){
+        let newVC = StatsController()
+        newVC.modalPresentationStyle = .overFullScreen
+        customPresent(newVC, from: .fromLeft, withDuration: 0.18)
+    }
+    
+    
+    func openInst(){
         let instagramHooks = "instagram://user?username=calmy_en"
         let instagramUrl = NSURL(string: instagramHooks)
         if UIApplication.shared.canOpenURL(instagramUrl! as URL) {
@@ -176,29 +188,27 @@ extension ViewController: AddColorViewProtocol {
             self.dimView.isHidden = true
         })
         addColorView.isHidden = true
+        AppStoreReviewManager.requestReview()
     }
     
     func AddData(proportion: Double, color: String, forDate date: Date?) {
         DispatchQueue.main.async{
             DataFunction.Add(proportion: proportion, color: color, date: date)
-            self.FetchData()
+            self.fetchData()
         }
     }
     
     func ShowAlert() {
-        let alert = UIAlertController(title: NSLocalizedString("info", comment: ""),
-                                      message: NSLocalizedString("info_desc", comment: ""), preferredStyle: .actionSheet)
+        var alert = prepareAlert(withTitle: NSLocalizedString("info", comment: ""),
+                                 andSubtitle: NSLocalizedString("info_desc", comment: ""))
         alert.addAction(UIAlertAction(title: "Instagram", style: .default , handler:{ (UIAlertAction) in
-            self.OpenInst()
+            self.openInst()
         }))
-        
+
         alert.addAction(UIAlertAction(title: "Privacy Policy", style: .default , handler:{ (UIAlertAction) in
             if let url = URL(string: "http://calmy.tilda.ws/privacy_policy") { UIApplication.shared.open(url) }
         }))
-            
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler:{ (UIAlertAction) in
-            print("User click Dismiss button")
-        }))
+        alert = alert.removeBreakingConstraints
         present(alert, animated: true, completion: nil)
     }
 }
@@ -213,15 +223,17 @@ extension ViewController {
     func SetSubviews(){
         view.addSubview(mainView)
         view.addSubview(colorTable)
+        view.addSubview(statsImage)
         view.addSubview(dimView)
         view.addSubview(addColorView)
         mainView.addSubview(buttonImage)
         
         mainView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ShowAddColorView)))
-        dimView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(HideAddColorView)))
-        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(HideAddColorView))
+        dimView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideAddColorView)))
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(hideAddColorView))
         swipeDown.direction = .down
         addColorView.addGestureRecognizer(swipeDown)
+        statsImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openStats)))
         
         dimView.isHidden = true
     }
@@ -242,6 +254,11 @@ extension ViewController {
             mainView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             mainView.heightAnchor.constraint(equalToConstant: mainView.frame.height),
             mainView.widthAnchor.constraint(equalToConstant: mainView.frame.width),
+            
+            statsImage.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -45),
+            statsImage.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30),
+            statsImage.heightAnchor.constraint(equalToConstant: statsImage.frame.height),
+            statsImage.widthAnchor.constraint(equalToConstant: statsImage.frame.width),
             
             buttonImage.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
             buttonImage.centerYAnchor.constraint(equalTo: mainView.centerYAnchor, constant: -3),

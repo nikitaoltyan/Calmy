@@ -58,11 +58,13 @@ class OnboardingCellThree: UICollectionViewCell {
     
     @objc func NextSlide() {
         if (blockThree.isHidden) {
-            Vibration.Soft()
+            Vibration.soft()
             blockThree.isHidden = false
+            blockThree.animate()
         } else if (blockFour.isHidden){
-            Vibration.Soft()
+            Vibration.soft()
             blockFour.isHidden = false
+            blockFour.animate()
             nextButton.label.text = NSLocalizedString("end", comment: "")
         } else {
             print("Delegate finish")

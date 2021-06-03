@@ -17,7 +17,6 @@ class BlockOne: UIView {
             .with(fontName: "Helvetica-Bold", size: 24)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = NSLocalizedString("block_one_label", comment: "")
-//        label.isHidden = true
         return label
     }()
     
@@ -30,7 +29,6 @@ class BlockOne: UIView {
             .with(bgColor: Colors.pink)
         view.addSoftUIEffectForView(cornerRadius: width/2, themeColor: Colors.pink)
         view.translatesAutoresizingMaskIntoConstraints = false
-//        view.isHidden = true
         return view
     }()
     
@@ -51,6 +49,15 @@ class BlockOne: UIView {
     
     required init?(coder: NSCoder) {
         fatalError()
+    }
+    
+    func animate() {
+        label.center.x -= 350
+        view.center.x += 350
+        UIView.animate(withDuration: 0.5, animations: {
+            self.label.center.x += 350
+            self.view.center.x -= 350
+        })
     }
 
 }

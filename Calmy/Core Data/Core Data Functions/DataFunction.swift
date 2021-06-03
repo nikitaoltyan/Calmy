@@ -46,6 +46,9 @@ class DataFunction {
         return []
     }
     
+    static func checkIfCount(moreThen number: Int) -> Bool {
+        return (fetchAllData().count >= number)
+    }
     
     /// Add give data in model.
     /// - warning: Only for "Model" Data Model.

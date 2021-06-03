@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreHaptics
 
 
 class Colors {
@@ -15,6 +16,7 @@ class Colors {
     static let shadow = UIColor(red: 233/255, green: 130/255, blue: 114/255, alpha: 1)
     static let logoColor = UIColor(red: 43/255, green: 28/255, blue: 41/255, alpha: 1)
     static let nearBlack = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
+    static let redWarning = UIColor(named: "redWarning") ?? UIColor.red
     
 }
 
@@ -31,22 +33,22 @@ class MainConstants {
 
 class Vibration {
     
-    static func Soft() -> Void{
+    static func soft() -> Void {
         let soft = UIImpactFeedbackGenerator(style: .soft)
         soft.impactOccurred()
     }
     
-    static func Light() -> Void{
+    static func light() -> Void {
         let light = UIImpactFeedbackGenerator(style: .light)
         light.impactOccurred()
     }
     
-    static func Medium() -> Void{
+    static func medium() -> Void {
         let medium = UIImpactFeedbackGenerator(style: .medium)
         medium.impactOccurred()
     }
     
-    static func Heavy() -> Void{
+    static func Heavy() -> Void {
         let heavy = UIImpactFeedbackGenerator(style: .heavy)
         heavy.impactOccurred()
     }

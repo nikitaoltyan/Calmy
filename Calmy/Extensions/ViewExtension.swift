@@ -42,6 +42,15 @@ extension UIView {
     }
     
     
+    func withShadow(size: CGSize) -> Self {
+        self.layer.shadowColor = UIColor.black.withAlphaComponent(0.1).cgColor
+        self.layer.shadowRadius = 5
+        self.layer.shadowOpacity = 0.6
+        self.layer.shadowOffset = size
+        return self
+    }
+    
+    
     /// Add a Neomorphism effect to UIView.
     public func addSoftUIEffectForView(cornerRadius: CGFloat = 15.0, themeColor: UIColor = UIColor(red: 241/255, green: 243/255, blue: 246/255, alpha: 1.0)) {
         self.layer.cornerRadius = cornerRadius

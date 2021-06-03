@@ -8,6 +8,8 @@
 import UIKit
 
 class OnboardingController: UIViewController {
+    
+    let notification = Notifications()
 
     lazy var collection: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -54,7 +56,8 @@ extension OnboardingController: OnboardingDelegate{
     }
     
     func Finish() {
-        Vibration.Medium()
+        Vibration.medium()
+        notification.requestAuthorization()
         Defaults.setHasLaunched(statusToSet: true)
         let newVC = ViewController()
         newVC.modalPresentationStyle = .fullScreen

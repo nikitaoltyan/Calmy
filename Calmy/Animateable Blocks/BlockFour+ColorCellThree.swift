@@ -35,6 +35,7 @@ class BlockFour: UIView {
             .with(bgColor: UIColor.gray.withAlphaComponent(0.5))
             .with(cornerRadius: 3)
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.isHidden = true
         return view
     }()
     
@@ -46,6 +47,7 @@ class BlockFour: UIView {
             .with(fontName: "Helvetica", size: 18)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = NSLocalizedString("block_four_explanation", comment: "")
+        label.isHidden = true
         return label
     }()
     
@@ -56,7 +58,7 @@ class BlockFour: UIView {
         self.backgroundColor = .clear
         SetSubviews()
         ActivateLayouts()
-        UpdateColorView()
+        updateColorView()
     }
     
     required init?(coder: NSCoder) {
@@ -64,12 +66,24 @@ class BlockFour: UIView {
     }
 
     
-    func UpdateColorView() {
+    func updateColorView() {
         let proportions: [Double] = [0.25, 0.1, 0.15, 0.12]
         let colors: [String] = ["flickrBlue", "blue", "yellowOchre", "redwood"]
         colorView.proportions = proportions
         colorView.colors = colors
         colorView.setNeedsDisplay()
+    }
+    
+    func animate() {
+        label.center.x -= 350
+        colorView.center.x += 350
+        UIView.animate(withDuration: 0.5, animations: {
+            self.label.center.x += 350
+            self.colorView.center.x -= 350
+        }, completion: { (_) in
+            self.stickView.isHidden = false
+            self.explainLabel.isHidden = false
+        })
     }
 }
 

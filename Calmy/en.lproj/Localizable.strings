@@ -27,6 +27,10 @@
 "gray_name" = "Gray";
 "white_name" = "White";
 
+// Notifications
+"notification_title" = "How was your day?";
+"notification_body" = "Add the color of your mood, add your day to a history!";
+
 // Onboarding
 "greeting" = "Welcome to Calmy – a simple mood tracker";
 "onboarding_large_label" = "There is nothing complicated here";
@@ -43,7 +47,13 @@
 "end" = "FINISH";
 
 // Other elements
+"close_alert" = "Dismiss";
 "choose" = "Choose";
 "info" = "Info";
 "info_desc" = "You can follow our Instagram and and ask any question you want.";
 
+// Warning alert
+"warning_title" = "That's not great =(";
+"warning_subtitle" = "This change in mood can be dangerous. If you have any thoughts of self-harm or suicide, we advise you to ask for help.";
+"warning_label" = "I need help";
+"warning_link" = "https://www.hftd.org/find-help?gclid=Cj0KCQjwp86EBhD7ARIsAFkgakgwoyN9_2mzXjRsL1Q1Lp8OY91XAvxQtVRm84so24U0G-oEOkD5nzUaArE9EALw_wcB";

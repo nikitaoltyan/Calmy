@@ -75,7 +75,7 @@ class BlockTwo: UIView {
         self.backgroundColor = .clear
         SetSubviews()
         ActivateLayouts()
-        UpdateColorView()
+        updateColorView()
     }
     
     required init?(coder: NSCoder) {
@@ -83,7 +83,7 @@ class BlockTwo: UIView {
     }
     
 
-    func UpdateColorView() {
+    func updateColorView() {
         let proportions: [Double] = [0.25, 0.1, 0.15, 0.12, 0.13, 0.25]
         let colors: [String] = ["flickrBlue", "blue", "yellowOchre", "redwood", "white", "black"]
         colorView.proportions = proportions

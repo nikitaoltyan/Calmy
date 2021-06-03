@@ -27,12 +27,16 @@
 "gray_name" = "Серый";
 "white_name" = "Белый";
 
+// Notifications
+"notification_title" = "Как прошел твой день?";
+"notification_body" = "Добавь цвет своего настроения, добавь свой день в историю!";
+
 // Onboarding
 "greeting" = "Welcome to Calmy – простой трекер настроения";
 "onboarding_large_label" = "Здесь нет ничего сложного";
 "onboarding_explanation" = "Просто выбирай цвет своего настроения, который ты чувствуешь сейчас. Можешь ориентироваться на описание, а можешь довериться своей интуиции. Дерзай!";
 "block_one_label" = "Нажимай на такую кнопку, чтобы выбрать цвет";
-"block_two_label" = "Так выглядит изменение настрояния за день";
+"block_two_label" = "Так выглядит изменение настроения за день";
 "block_two_explanation_one" = "00. Полночь";
 "block_two_explanation_two" = "24. Полночь";
 "block_three_label" = "В середине дня было так";
@@ -43,6 +47,13 @@
 "end" = "ЗАВЕРШИТЬ";
 
 // Other elements
+"close_alert" = "Закрыть";
 "choose" = "Выбрать";
 "info" = "Информация";
 "info_desc" = "Подпишись на наш Instagram и задай любой вопрос.";
+
+// Warning alert
+"warning_title" = "Это не здорово =(";
+"warning_subtitle" = "Такое изменение настроения может быть опасным. Если у вас появлялись мысли о причинении себе вреда или суициде – советуем обратится за помощью.";
+"warning_label" = "Мне нужна помощь";
+"warning_link" = "https://www.mos.ru/otvet-ekstrennie-situacii/kak-poluchit-ekstrennuyu-suicidologicheskuyu-pomosch/";
