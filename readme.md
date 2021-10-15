@@ -8,9 +8,9 @@ Calmy is the simplest mood tracker in the industry. You just need to choose the 
 2. Long-term plans – on the basis of user data (which will be collected anonymously, encrypted and with the consent of users) to make predictions about the time of depressive episodes of a person, as well as on the basis of machine learning to determine such diseases in a person as: bipolar disorder, depression, schizophrenia, psychosis.
 
 ## Photos
-<img src="./assets/MockUp_1_8_Eng.png" width = "30%"></img>
-<img src="./assets/MockUp_2_8_Eng.png" width = "30%"></img>
-<img src="./assets/MockUp_3_8_Eng.png" width = "30%"></img>
+<img src="./assets/MockUp_1_8_Eng.jpg" width = "30%"></img>
+<img src="./assets/MockUp_2_8_Eng.jpg" width = "30%"></img>
+<img src="./assets/MockUp_3_8_Eng.jpg" width = "30%"></img>
 
 ## Backend
 The app uses Firebase Firestore as DB and backend service.
